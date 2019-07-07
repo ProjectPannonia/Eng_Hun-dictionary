@@ -41,6 +41,8 @@ public class Controller {
     //The word is successfully added to the database
     @FXML
     Label AddedLabel;
+    @FXML
+    Label SearchedWordLabel;
 
     @FXML
     public void addWordEng(ActionEvent e){
@@ -59,7 +61,7 @@ public class Controller {
         ArrayList<Word> words = calfd.getAllWord();
         for(Word w : words){
             if(w.getEng().equals(eng)){
-                HunWordLabel.setText(w.getHun());
+                SearchedWordLabel.setText(w.getHun());
                 words = null;
             }else{
                 System.out.println("Nincs ilyen szó az adatbázisban!");
@@ -72,7 +74,7 @@ public class Controller {
         ArrayList<Word> words = calfd.getAllWord();
         for(Word w : words){
             if(w.getHun().equals(hun)){
-                EngWordLabel.setText(w.getEng());
+                SearchedWordLabel.setText(w.getEng());
                 words = null;
             }else{
                 System.out.println("Nincs ilyen szó az adatbázisban!");

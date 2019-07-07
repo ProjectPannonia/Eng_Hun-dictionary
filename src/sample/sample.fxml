@@ -25,14 +25,12 @@
       </Label>
       <TextField id="EngSearchTbox" fx:id="EngSearchTbox" layoutX="24.0" layoutY="118.0" />
       <TextField id="HunSearchTbox" fx:id="HunSearchTbox" layoutX="410.0" layoutY="118.0" />
-      <Label id="HunWordLabel" fx:id="HunWordLabel" alignment="CENTER" layoutX="22.0" layoutY="156.0" prefHeight="25.0" prefWidth="153.0" />
-      <Label id="EngWordLabel" fx:id="EngWordLabel" alignment="CENTER" layoutX="408.0" layoutY="156.0" prefHeight="25.0" prefWidth="153.0" />
-      <Button id="EngSearchButton" fx:id="EngSearchButton" onAction="#EngWordSearch" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Search">
+      <Button id="EngSearchButton" fx:id="EngSearchButton" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" onAction="#EngWordSearch" prefHeight="25.0" prefWidth="149.0" text="Search">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="HunSearchButton" fx:id="HunSearchButton" onAction="#HunWordSearch" layoutX="410.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Search">
+      <Button id="HunSearchButton" fx:id="HunSearchButton" layoutX="410.0" layoutY="200.0" mnemonicParsing="false" onAction="#HunWordSearch" prefHeight="25.0" prefWidth="149.0" text="Search">
          <font>
             <Font size="18.0" />
          </font>
@@ -54,5 +52,6 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="224.0" layoutY="144.0" prefHeight="25.0" prefWidth="153.0" />
    </children>
 </AnchorPane>
