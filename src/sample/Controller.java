@@ -54,12 +54,26 @@ public class Controller {
         }
     }
     @FXML
-    public void getDatabaseArrayList(ActionEvent e){
+    public void EngWordSearch(ActionEvent e){
         String eng = EngSearchTbox.getText();
         ArrayList<Word> words = calfd.getAllWord();
         for(Word w : words){
             if(w.getEng().equals(eng)){
                 HunWordLabel.setText(w.getHun());
+                words = null;
+            }else{
+                System.out.println("Nincs ilyen szó az adatbázisban!");
+            }
+        }
+    }
+    @FXML
+    public void HunWordSearch(ActionEvent e){
+        String hun = HunSearchTbox.getText();
+        ArrayList<Word> words = calfd.getAllWord();
+        for(Word w : words){
+            if(w.getHun().equals(hun)){
+                EngWordLabel.setText(w.getEng());
+                words = null;
             }else{
                 System.out.println("Nincs ilyen szó az adatbázisban!");
             }
