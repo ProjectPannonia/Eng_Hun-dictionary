@@ -6,10 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.util.ArrayList;
+
 public class Controller {
     addWordEng awe = new addWordEng();
     DB db = new DB();
     SearchEngWord sew = new SearchEngWord();
+    CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
 
     //Search box one
     @FXML
@@ -48,6 +51,18 @@ public class Controller {
             System.out.println("Sikeres adatküldés!");
         }else{
             System.out.println("A mezők értéke nem lehet null!");
+        }
+    }
+    @FXML
+    public void getDatabaseArrayList(ActionEvent e){
+        String eng = EngSearchTbox.getText();
+        ArrayList<Word> words = calfd.getAllWord();
+        for(Word w : words){
+            if(w.getEng().equals(eng)){
+                HunWordLabel.setText(w.getHun());
+            }else{
+                System.out.println("Nincs ilyen szó az adatbázisban!");
+            }
         }
     }
 }
