@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -23,8 +24,8 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField id="EngSearchTbox" fx:id="EngSearchTbox" layoutX="24.0" layoutY="118.0" />
-      <TextField id="HunSearchTbox" fx:id="HunSearchTbox" layoutX="410.0" layoutY="118.0" />
+      <TextField id="EngSearchTbox" fx:id="EngSearchTbox" alignment="CENTER" layoutX="24.0" layoutY="118.0" />
+      <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="410.0" layoutY="118.0" />
       <Button id="EngSearchButton" fx:id="EngSearchButton" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" onAction="#EngWordSearch" prefHeight="25.0" prefWidth="149.0" text="Search">
          <font>
             <Font size="18.0" />
@@ -40,18 +41,21 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" layoutX="24.0" layoutY="298.0" />
-      <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" layoutX="24.0" layoutY="349.0" />
-      <Label id="AddedLabel" fx:id="AddedLabel" alignment="CENTER" layoutX="408.0" layoutY="311.0" prefHeight="39.0" prefWidth="153.0">
+      <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER" layoutX="24.0" layoutY="298.0" />
+      <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER" layoutX="24.0" layoutY="349.0" />
+      <Label id="AddedLabel" fx:id="AddedLabel" alignment="CENTER" layoutX="395.0" layoutY="273.0" prefHeight="118.0" prefWidth="192.0">
          <font>
-            <Font size="21.0" />
+            <Font size="15.0" />
          </font>
+         <effect>
+            <Bloom />
+         </effect>
       </Label>
       <Button id="AddNewWordButton" fx:id="AddNewWordButton" layoutX="236.0" layoutY="321.0" mnemonicParsing="false" onAction="#addWordEng" prefHeight="25.0" prefWidth="149.0" text="Add the word">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="224.0" layoutY="144.0" prefHeight="25.0" prefWidth="153.0" />
+      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="224.0" layoutY="144.0" prefHeight="25.0" prefWidth="153.0" textAlignment="CENTER" />
    </children>
 </AnchorPane>

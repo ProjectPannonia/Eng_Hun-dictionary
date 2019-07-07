@@ -50,6 +50,7 @@ public class Controller {
         String hun = HunWordAddTbox.getText();
         if(eng != null && hun != null){
             awe.addUserP(eng,hun);
+            AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
             System.out.println("Sikeres adatküldés!");
         }else{
             System.out.println("A mezők értéke nem lehet null!");
