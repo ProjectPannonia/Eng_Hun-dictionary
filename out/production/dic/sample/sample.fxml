@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -7,43 +8,48 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="625.0" style="-fx-background-color: #009688;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label alignment="CENTER" layoutX="192.0" layoutY="14.0" prefHeight="48.0" prefWidth="216.0" text="Dictionary">
+      <Label id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" style="-fx-background-color: #00695c; -fx-: ;" text="Dictionary" textFill="#80deea">
          <font>
             <Font size="21.0" />
          </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" />
+         </opaqueInsets>
       </Label>
-      <Label alignment="CENTER" layoutX="22.0" layoutY="54.0" prefHeight="48.0" prefWidth="153.0" text="Eng - Hun">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" stylesheets="@../css/style.css" text="Eng - Hun" textFill="#80deea">
          <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="408.0" layoutY="54.0" prefHeight="48.0" prefWidth="153.0" text="Hun - Eng">
-         <font>
-            <Font size="18.0" />
+            <Font size="15.0" />
          </font>
       </Label>
-      <TextField id="EngSearchTbox" fx:id="EngSearchTbox" alignment="CENTER" layoutX="24.0" layoutY="118.0" />
-      <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="410.0" layoutY="118.0" />
-      <Button id="EngSearchButton" fx:id="EngSearchButton" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" onAction="#EngWordSearch" prefHeight="25.0" prefWidth="149.0" text="Search">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="84.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" text="Hun - Eng" textFill="#80deea">
          <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button id="HunSearchButton" fx:id="HunSearchButton" layoutX="410.0" layoutY="200.0" mnemonicParsing="false" onAction="#HunWordSearch" prefHeight="25.0" prefWidth="149.0" text="Search">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Label alignment="CENTER" layoutX="192.0" layoutY="239.0" prefHeight="48.0" prefWidth="216.0" text="Add new word">
-         <font>
-            <Font size="21.0" />
+            <Font size="15.0" />
          </font>
       </Label>
-      <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER" layoutX="24.0" layoutY="298.0" />
-      <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER" layoutX="24.0" layoutY="349.0" />
-      <Label id="AddedLabel" fx:id="AddedLabel" alignment="CENTER" layoutX="395.0" layoutY="273.0" prefHeight="118.0" prefWidth="192.0">
+      <TextField id="EngSearchTbox" fx:id="EngSearchTbox" alignment="CENTER" layoutX="226.0" layoutY="154.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="226.0" layoutY="93.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="15.0" layoutY="290.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" text="Add new word" textFill="#80deea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER" layoutX="226.0" layoutY="299.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER" layoutX="424.0" layoutY="299.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label id="AddedLabel" fx:id="AddedLabel" alignment="CENTER" layoutX="226.0" layoutY="355.0" prefHeight="59.0" prefWidth="381.0">
          <font>
             <Font size="15.0" />
          </font>
@@ -51,11 +57,19 @@
             <Bloom />
          </effect>
       </Label>
-      <Button id="AddNewWordButton" fx:id="AddNewWordButton" layoutX="236.0" layoutY="321.0" mnemonicParsing="false" onAction="#addWordEng" prefHeight="25.0" prefWidth="149.0" text="Add the word">
+      <Button id="AddNewWordButton" fx:id="AddNewWordButton" layoutX="36.0" layoutY="369.0" mnemonicParsing="false" onAction="#addWordEng" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Add the word">
          <font>
-            <Font size="18.0" />
+            <Font size="15.0" />
          </font>
       </Button>
-      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="224.0" layoutY="144.0" prefHeight="25.0" prefWidth="153.0" textAlignment="CENTER" />
+      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="424.0" layoutY="124.0" prefHeight="31.0" prefWidth="187.0" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button id="SearchButton" fx:id="SearchButton" layoutX="36.0" layoutY="217.0" mnemonicParsing="false" onAction="#EngWordSearch" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -43,7 +43,10 @@ public class Controller {
     Label AddedLabel;
     @FXML
     Label SearchedWordLabel;
-
+    @FXML
+    Button SearchButton;
+    @FXML
+    Label TitleLabel;
     @FXML
     public void addWordEng(ActionEvent e){
         String eng = EngWordAddTbox.getText();
@@ -56,6 +59,26 @@ public class Controller {
             System.out.println("A mezők értéke nem lehet null!");
         }
     }
+    @FXML
+    public void SearchWord(ActionEvent e){
+        String eng = EngSearchTbox.getText();
+        String hun = HunSearchTbox.getText();
+        ArrayList<Word> words = calfd.getAllWord();
+        if(eng != null){
+            for(Word w : words){
+                if(w.getEng().equals(eng)){
+                    SearchedWordLabel.setText(w.getHun());
+                }
+            }
+        }else if(hun != null){
+            for(Word w : words){
+                if(w.getHun().equals(hun)){
+                    SearchedWordLabel.setText(w.getEng());
+                }
+            }
+        }
+    }
+
     @FXML
     public void EngWordSearch(ActionEvent e){
         String eng = EngSearchTbox.getText();
