@@ -14,6 +14,14 @@
     -fx-text-fill: #2196f3;
     -fx-border-color:#2196f3;
     -fx-border-width:2;
+    //
+    -fx-position: relative;
+    -fx-animation: mymove 5s infinite;
+}
+//
+@keyframes mymove{
+from {left: 0px;}
+to  {left:200px;}
 }
 
 .button:pressed{

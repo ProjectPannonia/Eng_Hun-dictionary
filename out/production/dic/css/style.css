@@ -1,28 +1,46 @@
 .button{
     -fx-background-color: #039be5;
     -fx-font-weight:bold;
-    -fx-background-radius:22;
     -fx-font-size:16;
     -fx-text-fill:white;
+    -fx-border-width:2;
+    -fx-border-color:white;
+    -fx-border-radius:19;
+    -fx-background-radius:22px;
 }
 
 .button:hover{
     -fx-background-color: white;
     -fx-font-weight:bold;
-    -fx-background-radius:20;
     -fx-font-size:16;
     -fx-text-fill: #2196f3;
+    -fx-border-width:3;
     -fx-border-color:#2196f3;
-    -fx-border-width:2;
+    -fx-border-radius: 19;
+    -fx-background-radius:30px;
 }
 
 .button:pressed{
     -fx-background-color: white;
     -fx-font-weight:bold;
-    -fx-background-radius:20;
+    -fx-background-radius:19;
     -fx-font-size:16;
     -fx-text-fill: #2196f3;
     -fx-border-color:#2196f3;
-    -fx-border-width:3;
+    -fx-border-width:2;
     -fx-rotate:10;
+}
+
+.AP{
+  -fx-background-color: #00695c;
+}
+
+.LabelBlue{
+  -fx-background-color: #1957bc;
+  -fx-background-radius: 7;
+  -fx-textFill :#80deea;
+}
+.TitleLabel{
+  -fx-textFill : #80deea;
+  -fx-background-color:#00796b;
 }

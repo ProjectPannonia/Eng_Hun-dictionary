@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="625.0" style="-fx-background-color: #009688;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane styleClass="AP" id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="625.0" style="" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" style="-fx-background-color: #00695c; -fx-: ;" text="Dictionary" textFill="#80deea">
+      <Label styleClass="TitleLabel" id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" stylesheets="@../css/style.css" text="Dictionary" >
          <font>
             <Font size="21.0" />
          </font>
@@ -18,12 +18,12 @@
             <Insets bottom="10.0" />
          </opaqueInsets>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" stylesheets="@../css/style.css" text="Eng - Hun" textFill="#80deea">
+      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Eng - Hun">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="84.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" text="Hun - Eng" textFill="#80deea">
+      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="14.0" layoutY="84.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Hun - Eng" >
          <font>
             <Font size="15.0" />
          </font>
@@ -36,7 +36,7 @@
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <Label alignment="CENTER" layoutX="15.0" layoutY="290.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #1957bd; -fx-background-radius: 7;" text="Add new word" textFill="#80deea">
+      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="15.0" layoutY="290.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add new word" >
          <font>
             <Font size="15.0" />
          </font>
@@ -66,7 +66,7 @@
          <font>
             <Font size="15.0" />
          </font></Label>
-      <Button id="SearchButton" fx:id="SearchButton" layoutX="36.0" layoutY="217.0" mnemonicParsing="false" onAction="#EngWordSearch" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Search">
+      <Button id="SearchButton" fx:id="SearchButton" layoutX="36.0" layoutY="217.0" mnemonicParsing="false" onAction="#SearchWord" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Search">
          <font>
             <Font size="15.0" />
          </font>

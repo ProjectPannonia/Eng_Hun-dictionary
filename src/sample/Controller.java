@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
@@ -48,37 +49,56 @@ public class Controller {
     @FXML
     Label TitleLabel;
     @FXML
-    public void addWordEng(ActionEvent e){
+    Pane AncorPane;
+
+    @FXML
+    public void addWordEng(ActionEvent e) {
         String eng = EngWordAddTbox.getText();
         String hun = HunWordAddTbox.getText();
-        if(eng != null && hun != null){
-            awe.addUserP(eng,hun);
+        if (eng != null && hun != null) {
+            awe.addUserP(eng, hun);
             AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
             System.out.println("Sikeres adatküldés!");
-        }else{
+        } else {
             System.out.println("A mezők értéke nem lehet null!");
         }
     }
-    @FXML
-    public void SearchWord(ActionEvent e){
-        String eng = EngSearchTbox.getText();
-        String hun = HunSearchTbox.getText();
-        ArrayList<Word> words = calfd.getAllWord();
-        if(eng != null){
-            for(Word w : words){
-                if(w.getEng().equals(eng)){
-                    SearchedWordLabel.setText(w.getHun());
-                }
-            }
-        }else if(hun != null){
-            for(Word w : words){
-                if(w.getHun().equals(hun)){
-                    SearchedWordLabel.setText(w.getEng());
-                }
-            }
-        }
-    }
 
+    @FXML
+    public void SearchWord(ActionEvent e) {
+        boolean en = EngSearchTbox.getText().trim().isEmpty();
+        boolean hu = HunSearchTbox.getText().trim().isEmpty();
+        ArrayList<Word> words = calfd.getAllWord();
+        if (!en && hu) {
+            String eng = EngSearchTbox.getText();
+            boolean hit = false;
+            for (Word w : words) {
+                if (w.getEng().equals(eng)) {
+                    SearchedWordLabel.setText(w.getEng() + " - " + w.getHun());
+                    EngSearchTbox.setText("");
+                    HunSearchTbox.setText("");
+                    hit = true;
+                }
+            }
+            if(hit == false) SearchedWordLabel.setText("Nincs találat!");
+        } else if (en && !hu) {
+            String hun = HunSearchTbox.getText();
+            boolean hit = false;
+            for (Word w : words) {
+                if (w.getHun().equals(hun)) {
+                    SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
+                    EngSearchTbox.setText("");
+                    HunSearchTbox.setText("");
+                }
+            }
+            if(hit == false) SearchedWordLabel.setText("Nincs találat!");
+        } else if (!en && !hu) {
+            System.out.println("Hibás bevitel! Mindkét mező adatot tartalmaz!");
+        } else if (en && hu) {
+            System.out.println("Hibás bevitel! Mindkét mező üres!");
+        }
+
+/*
     @FXML
     public void EngWordSearch(ActionEvent e){
         String eng = EngSearchTbox.getText();
@@ -92,7 +112,8 @@ public class Controller {
             }
         }
     }
-    @FXML
+*/
+    /*@FXML
     public void HunWordSearch(ActionEvent e){
         String hun = HunSearchTbox.getText();
         ArrayList<Word> words = calfd.getAllWord();
@@ -104,5 +125,7 @@ public class Controller {
                 System.out.println("Nincs ilyen szó az adatbázisban!");
             }
         }
+    }
+    */
     }
 }
