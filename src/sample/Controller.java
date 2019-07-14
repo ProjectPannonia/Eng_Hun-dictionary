@@ -16,7 +16,7 @@ public class Controller {
     DB db = new DB();
     SearchEngWord sew = new SearchEngWord();
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
-
+    WordCounter wc = new WordCounter();
     //Search box one
     @FXML
     TextField EngSearchTbox;
@@ -111,7 +111,7 @@ public class Controller {
             alert.showAndWait();
             System.out.println("Hibás bevitel! Mindkét mező üres!");
         }
-
+        System.out.println(wc.WordCounter());
 /*
     @FXML
     public void EngWordSearch(ActionEvent e){

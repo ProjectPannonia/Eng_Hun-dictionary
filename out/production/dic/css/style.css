@@ -62,7 +62,13 @@
 #AddNewWordButton:hover{
   -fx-min-width:100;
   -fx-max-width:200;
+  -fx-animation-delay:2s;
 }
 #RightBottomVBox{
   -fx-background-color:#26a69a;
+  -fx-border-color:#26a69a;
+}
+#RightBottomVBox{
+  -fx-background-color:#26a69a;
+  -fx-border-color:#26a69a;
 }

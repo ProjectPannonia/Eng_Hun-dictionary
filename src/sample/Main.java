@@ -8,10 +8,17 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class Main extends Application {
 
+public class Main extends Application {
+    @Override
+    public void init() throws Exception{
+        WordCounter wc = new WordCounter();
+        wc.WordCounter();
+        System.out.println(wc.WordCounter());
+    }
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));

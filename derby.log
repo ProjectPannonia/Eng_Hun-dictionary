@@ -1,5 +1,5 @@
 ----------------------------------------------------------------
-Sun Jul 14 14:57:59 CEST 2019D001 : [0] The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019), [1] a816c00e-016b-f08f-b9ad-00000f8c8958, [2] D:\Repo\Dictionary\dic, [3] jdk.internal.loader.ClassLoaders$AppClassLoader@49097b5d, [4] file:/D:/Repo/Dictionary/derbyDatabase/derby.jar
+Sun Jul 14 19:20:42 CEST 2019D001 : [0] The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019), [1] a816c00e-016b-f180-409c-00000faed200, [2] D:\Repo\Dictionary\dic, [3] jdk.internal.loader.ClassLoaders$AppClassLoader@49097b5d, [4] file:/D:/Repo/Dictionary/derbyDatabase/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=12.0.1+12
 user.dir=D:\Repo\Dictionary

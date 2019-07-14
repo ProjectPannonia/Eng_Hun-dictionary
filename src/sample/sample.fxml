@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="625.0" style="" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="625.0" style="" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" stylesheets="@../css/style.css" text="Dictionary" textFill="#80deea">
          <font>
@@ -28,7 +28,7 @@
             <Bloom />
          </effect>
       </Label>
-      <VBox id="menuVBox" alignment="CENTER" layoutY="75.0" prefHeight="387.0" prefWidth="200.0" styleClass="menuVBox" stylesheets="@../css/style.css">
+      <VBox id="menuVBox" alignment="CENTER" layoutY="75.0" prefHeight="387.0" prefWidth="187.0" styleClass="menuVBox" stylesheets="@../css/style.css">
          <children>
             <Label alignment="CENTER" prefHeight="55.0" prefWidth="200.0" styleClass="LabelBlue" stylesheets="@../css/style.css" text="Hun - Eng" textFill="#80deea">
                <font>
@@ -55,14 +55,14 @@
             </Button>
          </children>
       </VBox>
-      <VBox id="RightVBox" alignment="CENTER" layoutX="200.0" layoutY="75.0" prefHeight="387.0" prefWidth="425.0" stylesheets="@../css/style.css">
+      <VBox id="RightVBox" alignment="CENTER" layoutX="192.0" layoutY="75.0" prefHeight="387.0" prefWidth="433.0" stylesheets="@../css/style.css">
          <children>
             <VBox alignment="CENTER" prefHeight="205.0" prefWidth="415.0" stylesheets="@../css/style.css">
                <children>
                   <Label disable="true" prefHeight="40.0" prefWidth="415.0" />
                   <SplitPane dividerPositions="0.5447941888619855" prefHeight="160.0" prefWidth="200.0">
                     <items>
-                      <AnchorPane id="RightAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/style.css">
+                      <AnchorPane id="RightAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="152.0" prefWidth="243.0" stylesheets="@../css/style.css">
                            <children>
                               <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="18.0" layoutY="27.0">
                                  <font>
@@ -78,7 +78,7 @@
                         </AnchorPane>
                       <AnchorPane id="RightAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/style.css">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="152.0" prefWidth="185.0">
+                              <VBox alignment="CENTER" prefHeight="152.0" prefWidth="185.0" style="-fx-border-color: #26a69a;">
                                  <children>
                                     <Button id="SearchButton" fx:id="SearchButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SearchWord" stylesheets="@../css/style.css" text="Search">
                                        <font>
@@ -101,7 +101,7 @@
                <items>
                   <VBox id="RightBottomVBox" prefHeight="243.0" prefWidth="204.0">
                      <children>
-                        <Label prefHeight="54.0" prefWidth="204.0" />
+                        <Label prefHeight="54.0" prefWidth="204.0" stylesheets="@../css/style.css" />
                         <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER">
                            <font>
                               <Font size="15.0" />
@@ -112,7 +112,7 @@
                         </TextField>
                      </children>
                   </VBox>
-                  <VBox prefHeight="198.0" prefWidth="203.0">
+                  <VBox id="RightBottomVBox" prefHeight="179.0" prefWidth="166.0" stylesheets="@../css/style.css">
                      <children>
                         <Label prefHeight="56.0" prefWidth="203.0" />
                         <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER">
@@ -129,5 +129,13 @@
             </SplitPane>
          </children>
       </VBox>
+      <Label id="TitleLabel" fx:id="TitleLabel1" alignment="CENTER_RIGHT" layoutY="470.0" prefHeight="59.0" prefWidth="625.0" stylesheets="@../css/style.css" text="By LDS    2019. " textFill="#80deea">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" />
+         </opaqueInsets>
+      </Label>
    </children>
 </AnchorPane>
