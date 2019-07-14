@@ -3,14 +3,16 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane styleClass="AP" id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="625.0" style="" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="625.0" style="" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label styleClass="TitleLabel" id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" stylesheets="@../css/style.css" text="Dictionary" >
+      <Label id="TitleLabel" fx:id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" stylesheets="@../css/style.css" text="Dictionary" textFill="#80deea">
          <font>
             <Font size="21.0" />
          </font>
@@ -18,37 +20,6 @@
             <Insets bottom="10.0" />
          </opaqueInsets>
       </Label>
-      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Eng - Hun">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="14.0" layoutY="84.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Hun - Eng" >
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField id="EngSearchTbox" fx:id="EngSearchTbox" alignment="CENTER" layoutX="226.0" layoutY="154.0">
-         <font>
-            <Font size="15.0" />
-         </font></TextField>
-      <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="226.0" layoutY="93.0">
-         <font>
-            <Font size="15.0" />
-         </font></TextField>
-      <Label styleClass="LabelBlue" alignment="CENTER" layoutX="15.0" layoutY="290.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add new word" >
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER" layoutX="226.0" layoutY="299.0">
-         <font>
-            <Font size="15.0" />
-         </font></TextField>
-      <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER" layoutX="424.0" layoutY="299.0">
-         <font>
-            <Font size="15.0" />
-         </font></TextField>
       <Label id="AddedLabel" fx:id="AddedLabel" alignment="CENTER" layoutX="226.0" layoutY="355.0" prefHeight="59.0" prefWidth="381.0">
          <font>
             <Font size="15.0" />
@@ -57,19 +28,106 @@
             <Bloom />
          </effect>
       </Label>
-      <Button id="AddNewWordButton" fx:id="AddNewWordButton" layoutX="36.0" layoutY="369.0" mnemonicParsing="false" onAction="#addWordEng" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Add the word">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Label id="SearchedWordLabel" fx:id="SearchedWordLabel" alignment="CENTER" layoutX="424.0" layoutY="124.0" prefHeight="31.0" prefWidth="187.0" textAlignment="CENTER">
-         <font>
-            <Font size="15.0" />
-         </font></Label>
-      <Button id="SearchButton" fx:id="SearchButton" layoutX="36.0" layoutY="217.0" mnemonicParsing="false" onAction="#SearchWord" prefHeight="25.0" prefWidth="149.0" stylesheets="@../css/style.css" text="Search">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
+      <VBox id="menuVBox" alignment="CENTER" layoutY="75.0" prefHeight="387.0" prefWidth="200.0" styleClass="menuVBox" stylesheets="@../css/style.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="200.0" styleClass="LabelBlue" stylesheets="@../css/style.css" text="Hun - Eng" textFill="#80deea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="24.0" prefWidth="201.0" />
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="201.0" styleClass="LabelBlue" stylesheets="@../css/style.css" text="Eng - Hun" textFill="#80deea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="192.0" />
+            <Label prefHeight="8.0" prefWidth="192.0" />
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add new word" textFill="#80deea">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button id="AddNewWordButton" fx:id="AddNewWordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addWordEng" stylesheets="@../css/style.css" text="Add the word">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox id="RightVBox" alignment="CENTER" layoutX="200.0" layoutY="75.0" prefHeight="387.0" prefWidth="425.0" stylesheets="@../css/style.css">
+         <children>
+            <VBox alignment="CENTER" prefHeight="205.0" prefWidth="415.0" stylesheets="@../css/style.css">
+               <children>
+                  <Label disable="true" prefHeight="40.0" prefWidth="415.0" />
+                  <SplitPane dividerPositions="0.5447941888619855" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane id="RightAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/style.css">
+                           <children>
+                              <TextField id="HunSearchTbox" fx:id="HunSearchTbox" alignment="CENTER" layoutX="18.0" layoutY="27.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField id="EngSearchTbox" fx:id="EngSearchTbox" alignment="CENTER" layoutX="20.0" layoutY="89.0" prefHeight="31.0" prefWidth="184.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane id="RightAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/style.css">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="152.0" prefWidth="185.0">
+                                 <children>
+                                    <Button id="SearchButton" fx:id="SearchButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SearchWord" stylesheets="@../css/style.css" text="Search">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <Label prefHeight="24.0" prefWidth="201.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </VBox>
+            <SplitPane id="LeftBottomSplitPane" dividerPositions="0.5" focusTraversable="false" prefHeight="181.0" prefWidth="415.0" stylesheets="@../css/style.css">
+               <items>
+                  <VBox id="RightBottomVBox" prefHeight="243.0" prefWidth="204.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="204.0" />
+                        <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="203.0">
+                     <children>
+                        <Label prefHeight="56.0" prefWidth="203.0" />
+                        <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </items>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </SplitPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

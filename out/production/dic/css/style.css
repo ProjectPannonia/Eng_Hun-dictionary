@@ -31,16 +31,38 @@
     -fx-rotate:10;
 }
 
-.AP{
+#AnchorPane{
   -fx-background-color: #00695c;
 }
 
-.LabelBlue{
-  -fx-background-color: #1957bc;
-  -fx-background-radius: 7;
-  -fx-textFill :#80deea;
-}
-.TitleLabel{
+
+#TitleLabel{
   -fx-textFill : #80deea;
   -fx-background-color:#00796b;
+}
+#menuVBox{
+  -fx-background-color:#009688;
+}
+#RightVBox{
+  -fx-background-color:#26a69a;
+}
+#LeftBottomSplitPane{
+  -fx-background-color:#4db6ac;
+}
+#RightAnchorPane{
+-fx-background-color:#26a69a;
+}
+#RightAnchorPane{
+  -fx-background-color:#26a69a;
+}
+#SearchButton:hover{
+  -fx-min-width:100;
+  -fx-max-width:185;
+}
+#AddNewWordButton:hover{
+  -fx-min-width:100;
+  -fx-max-width:200;
+}
+#RightBottomVBox{
+  -fx-background-color:#26a69a;
 }

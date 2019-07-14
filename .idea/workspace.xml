@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/dic/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c180.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c380.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c391.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c41.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dic/service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/libraries/Derby.xml" beforeDir="false" />
@@ -133,21 +110,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+            <state relative-caret-position="592">
+              <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="68" column="129" selection-start-line="68" selection-start-column="129" selection-end-line="68" selection-end-column="129" />
+            <state relative-caret-position="165">
+              <caret line="80" column="92" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -204,16 +181,17 @@
         <option value="$PROJECT_DIR$/src/sample/DB.java" />
         <option value="$PROJECT_DIR$/src/css/style.css" />
         <option value="$PROJECT_DIR$/src/sample/SearchHunWord.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="869" />
-    <option name="width" value="1056" />
-    <option name="height" value="1087" />
+    <option name="x" value="704" />
+    <option name="y" value="77" />
+    <option name="width" value="1221" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -238,12 +216,6 @@
               <item name="Dictionary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dictionary" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Dictionary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Dictionary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dictionary" type="b2602c69:ProjectViewProjectNode" />
@@ -383,7 +355,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.13319013" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.0886144" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -392,7 +364,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23692636" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28708646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,18 +462,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="68" column="129" selection-start-line="68" selection-start-column="129" selection-end-line="68" selection-end-column="129" />
+        <state relative-caret-position="592">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        <state relative-caret-position="165">
+          <caret line="80" column="92" selection-start-line="80" selection-start-column="92" selection-end-line="80" selection-end-column="92" />
         </state>
       </provider>
     </entry>

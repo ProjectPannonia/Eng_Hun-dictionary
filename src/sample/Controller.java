@@ -2,10 +2,12 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
@@ -50,6 +52,8 @@ public class Controller {
     Label TitleLabel;
     @FXML
     Pane AncorPane;
+    @FXML
+    VBox menuVBox;
 
     @FXML
     public void addWordEng(ActionEvent e) {
@@ -74,9 +78,8 @@ public class Controller {
             boolean hit = false;
             for (Word w : words) {
                 if (w.getEng().equals(eng)) {
-                    SearchedWordLabel.setText(w.getEng() + " - " + w.getHun());
-                    EngSearchTbox.setText("");
-                    HunSearchTbox.setText("");
+                    //SearchedWordLabel.setText(w.getEng() + " - " + w.getHun());
+                    HunSearchTbox.setText(w.getHun());
                     hit = true;
                 }
             }
@@ -86,15 +89,26 @@ public class Controller {
             boolean hit = false;
             for (Word w : words) {
                 if (w.getHun().equals(hun)) {
-                    SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
-                    EngSearchTbox.setText("");
-                    HunSearchTbox.setText("");
+                    //SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
+                    EngSearchTbox.setText(w.getEng());
+
+                    hit = true;
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
         } else if (!en && !hu) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Hibás bevitel!");
+            alert.setHeaderText("Mindkét mező adatot tartalmaz!");
+            alert.setContentText("Kérlek csak a keresett szót írd be. A másik mezőből töröld az szöveget!");
+            alert.showAndWait();
             System.out.println("Hibás bevitel! Mindkét mező adatot tartalmaz!");
         } else if (en && hu) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Hibás bevitel!");
+            alert.setHeaderText("Mindkét mező üres!");
+            alert.setContentText("Valamelyik mezőbe írd be a nyelvnek megfelelő keresett szót!");
+            alert.showAndWait();
             System.out.println("Hibás bevitel! Mindkét mező üres!");
         }
 
