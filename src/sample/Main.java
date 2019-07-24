@@ -16,6 +16,7 @@ public class Main extends Application {
         wc.WordCounter();
         System.out.println(wc.WordCounter());
     }
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 

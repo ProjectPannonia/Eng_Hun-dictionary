@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 
 import java.util.ArrayList;
 
@@ -17,44 +18,34 @@ public class Controller {
     SearchEngWord sew = new SearchEngWord();
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
     WordCounter wc = new WordCounter();
-    //Search box one
+    //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
-    TextField EngSearchTbox;
-    //Search box two
+    TextField EngSearchTbox,HunSearchTbox,EngWordAddTbox,HunWordAddTbox;
+
+    //Returned hun word,Returned eng word
     @FXML
-    TextField HunSearchTbox;
-    //Returned hun word
+    Label HunWordLabel,EngWordLabel,TitleLabel;
+
+    //Search button for searching english word,Search button for searching hungarian word
     @FXML
-    Label HunWordLabel;
-    //Returned eng word
-    @FXML
-    Label EngWordLabel;
-    //Search button for searching english word
-    @FXML
-    Button EngSearchButton;
-    //Search button for searching hungarian word
-    @FXML
-    Button HunSearchButton;
-    //Add new english word here
-    @FXML
-    TextField EngWordAddTbox;
-    //Add new hungarian word here
-    @FXML
-    TextField HunWordAddTbox;
+    Button EngSearchButton,HunSearchButton,SearchButton,BrowseButton;
+
     //The word is successfully added to the database
     @FXML
-    Label AddedLabel;
-    @FXML
-    Label SearchedWordLabel;
-    @FXML
-    Button SearchButton;
-    @FXML
-    Label TitleLabel;
+    Label AddedLabel,SearchedWordLabel;
+
     @FXML
     Pane AncorPane;
     @FXML
     VBox menuVBox;
-
+/*
+    @FXML
+    public void Browse(ActionEvent e){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open a text file!");
+        fileChooser.showOpenDialog();
+    }
+*/
     @FXML
     public void addWordEng(ActionEvent e) {
         String eng = EngWordAddTbox.getText();

@@ -1,74 +1,36 @@
 .button{
     -fx-background-color: #039be5;
     -fx-font-weight:bold;
+    -fx-background-radius:22;
     -fx-font-size:16;
     -fx-text-fill:white;
-    -fx-border-width:2;
-    -fx-border-color:white;
-    -fx-border-radius:19;
-    -fx-background-radius:22px;
 }
 
 .button:hover{
     -fx-background-color: white;
     -fx-font-weight:bold;
+    -fx-background-radius:20;
     -fx-font-size:16;
     -fx-text-fill: #2196f3;
-    -fx-border-width:3;
     -fx-border-color:#2196f3;
-    -fx-border-radius: 19;
-    -fx-background-radius:30px;
+    -fx-border-width:2;
+    //
+    -fx-position: relative;
+    -fx-animation: mymove 5s infinite;
+}
+//
+@keyframes mymove{
+from {left: 0px;}
+to  {left:200px;}
 }
 
 .button:pressed{
     -fx-background-color: white;
     -fx-font-weight:bold;
-    -fx-background-radius:19;
+    -fx-background-radius:20;
     -fx-font-size:16;
     -fx-text-fill: #2196f3;
     -fx-border-color:#2196f3;
-    -fx-border-width:2;
+    -fx-border-width:3;
     -fx-rotate:10;
-}
-
-#AnchorPane{
-  -fx-background-color: #00695c;
-}
-
-
-#TitleLabel{
-  -fx-textFill : #80deea;
-  -fx-background-color:#00796b;
-}
-#menuVBox{
-  -fx-background-color:#009688;
-}
-#RightVBox{
-  -fx-background-color:#26a69a;
-}
-#LeftBottomSplitPane{
-  -fx-background-color:#4db6ac;
-}
-#RightAnchorPane{
--fx-background-color:#26a69a;
-}
-#RightAnchorPane{
-  -fx-background-color:#26a69a;
-}
-#SearchButton:hover{
-  -fx-min-width:100;
-  -fx-max-width:185;
-}
-#AddNewWordButton:hover{
-  -fx-min-width:100;
-  -fx-max-width:200;
-  -fx-animation-delay:2s;
-}
-#RightBottomVBox{
-  -fx-background-color:#26a69a;
-  -fx-border-color:#26a69a;
-}
-#RightBottomVBox{
-  -fx-background-color:#26a69a;
-  -fx-border-color:#26a69a;
 }
