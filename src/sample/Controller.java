@@ -18,6 +18,8 @@ public class Controller {
     SearchEngWord sew = new SearchEngWord();
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
     WordCounter wc = new WordCounter();
+    EmptyChecker ec = new EmptyChecker();
+
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
     TextField EngSearchTbox,HunSearchTbox,EngWordAddTbox,HunWordAddTbox;
@@ -50,7 +52,8 @@ public class Controller {
     public void addWordEng(ActionEvent e) {
         String eng = EngWordAddTbox.getText();
         String hun = HunWordAddTbox.getText();
-        if (eng != null && hun != null) {
+
+        if (ec.EmptyCheck(eng,hun)) {
             awe.addUserP(eng, hun);
             AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
             System.out.println("Sikeres adatküldés!");
@@ -58,7 +61,7 @@ public class Controller {
             System.out.println("A mezők értéke nem lehet null!");
         }
     }
-
+    // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
         boolean en = EngSearchTbox.getText().trim().isEmpty();
@@ -103,34 +106,5 @@ public class Controller {
             System.out.println("Hibás bevitel! Mindkét mező üres!");
         }
         System.out.println(wc.WordCounter());
-/*
-    @FXML
-    public void EngWordSearch(ActionEvent e){
-        String eng = EngSearchTbox.getText();
-        ArrayList<Word> words = calfd.getAllWord();
-        for(Word w : words){
-            if(w.getEng().equals(eng)){
-                SearchedWordLabel.setText(w.getHun());
-                words = null;
-            }else{
-                System.out.println("Nincs ilyen szó az adatbázisban!");
-            }
-        }
-    }
-*/
-    /*@FXML
-    public void HunWordSearch(ActionEvent e){
-        String hun = HunSearchTbox.getText();
-        ArrayList<Word> words = calfd.getAllWord();
-        for(Word w : words){
-            if(w.getHun().equals(hun)){
-                SearchedWordLabel.setText(w.getEng());
-                words = null;
-            }else{
-                System.out.println("Nincs ilyen szó az adatbázisban!");
-            }
-        }
-    }
-    */
     }
 }
