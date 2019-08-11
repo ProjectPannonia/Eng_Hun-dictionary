@@ -1,6 +1,8 @@
 package sample;
 
-import checkers.EmptyChecker;
+import checkers.EmptyCheck;
+import checkers.EngEmptyCheck;
+import checkers.HunEmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -18,7 +20,9 @@ public class Controller {
     SearchEngWord sew = new SearchEngWord();
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
     WordCounter wc = new WordCounter();
-    EmptyChecker ec = new EmptyChecker();
+    EmptyCheck ec = new EmptyCheck();
+    EngEmptyCheck eec = new EngEmptyCheck();
+    HunEmptyCheck hec = new HunEmptyCheck();
 
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
@@ -50,10 +54,10 @@ public class Controller {
 */
     @FXML
     public void addWordEng(ActionEvent e) {
-        String eng = EngWordAddTbox.getText().toLowerCase();
-        String hun = HunWordAddTbox.getText().toLowerCase();
+        String eng = EngWordAddTbox.getText();
+        String hun = HunWordAddTbox.getText();
 
-        if (ec.EmptyCheck(eng,hun)) {
+        if (ec.emptyCheck(eng,hun)) {
             awe.addUserP(eng, hun);
             AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
             System.out.println("Sikeres adatküldés!");
@@ -64,10 +68,8 @@ public class Controller {
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
-        boolean en = EngSearchTbox.getText().trim().isEmpty();
-        boolean hu = HunSearchTbox.getText().trim().isEmpty();
         ArrayList<Word> words = calfd.getAllWord();
-        if (!en && hu) {
+        if (eec.emptyCheck(EngSearchTbox.getText(),HunSearchTbox.getText())) {
             String eng = EngSearchTbox.getText().toLowerCase();
             EngSearchTbox.setText(eng);
             boolean hit = false;
@@ -79,7 +81,7 @@ public class Controller {
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
-        } else if (en && !hu) {
+        } else if (hec.emptyCheck(EngSearchTbox.getText(),HunSearchTbox.getText())) {
             String hun = HunSearchTbox.getText().toLowerCase();
             HunSearchTbox.setText(hun);
             boolean hit = false;

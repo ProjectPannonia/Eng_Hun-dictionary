@@ -12,7 +12,7 @@ public class Reader {
 
         try(BufferedReader in = new BufferedReader(new FileReader(path))){
             while ((str = in.readLine()) != null){
-                tokens = str.split(",");
+                tokens = str.split(" ");
             }
         }catch (IOException e){
             System.out.println("File not found!");

@@ -97,7 +97,7 @@
                   <Insets left="5.0" right="5.0" />
                </VBox.margin>
             </VBox>
-            <SplitPane id="LeftBottomSplitPane" dividerPositions="0.5" focusTraversable="false" prefHeight="181.0" prefWidth="415.0" stylesheets="@../css/style.css">
+            <SplitPane id="LeftBottomSplitPane" dividerPositions="0.5368171021377672" focusTraversable="false" prefHeight="181.0" prefWidth="415.0" stylesheets="@../css/style.css">
                <items>
                   <VBox id="RightBottomVBox" prefHeight="243.0" prefWidth="204.0">
                      <children>
