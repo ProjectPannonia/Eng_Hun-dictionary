@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dic.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/dic/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/sample/EmptyChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/EmptyChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkers/EmptyChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddWordsFromFile/CreatingHashMapFromWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddWordsFromFile/CreatingHashMapFromWords.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/libraries/Derby.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/FirstConnection.iml" beforeDir="false" />
@@ -216,7 +205,7 @@
       <workItem from="1564334013937" duration="667000" />
       <workItem from="1564335081581" duration="16000" />
       <workItem from="1564335124699" duration="589000" />
-      <workItem from="1565542942480" duration="2521000" />
+      <workItem from="1565542942480" duration="3087000" />
     </task>
     <servers />
   </component>
