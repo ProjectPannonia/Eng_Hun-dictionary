@@ -1,5 +1,6 @@
 package sample;
 
+import checkers.EmptyChecker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -8,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
 
 import java.util.ArrayList;
 
@@ -26,11 +26,11 @@ public class Controller {
 
     //Returned hun word,Returned eng word
     @FXML
-    Label HunWordLabel,EngWordLabel,TitleLabel;
+    Label TitleLabel;
 
     //Search button for searching english word,Search button for searching hungarian word
     @FXML
-    Button EngSearchButton,HunSearchButton,SearchButton,BrowseButton;
+    Button SearchButton,BrowseButton;
 
     //The word is successfully added to the database
     @FXML
@@ -50,8 +50,8 @@ public class Controller {
 */
     @FXML
     public void addWordEng(ActionEvent e) {
-        String eng = EngWordAddTbox.getText();
-        String hun = HunWordAddTbox.getText();
+        String eng = EngWordAddTbox.getText().toLowerCase();
+        String hun = HunWordAddTbox.getText().toLowerCase();
 
         if (ec.EmptyCheck(eng,hun)) {
             awe.addUserP(eng, hun);
@@ -68,23 +68,25 @@ public class Controller {
         boolean hu = HunSearchTbox.getText().trim().isEmpty();
         ArrayList<Word> words = calfd.getAllWord();
         if (!en && hu) {
-            String eng = EngSearchTbox.getText();
+            String eng = EngSearchTbox.getText().toLowerCase();
+            EngSearchTbox.setText(eng);
             boolean hit = false;
             for (Word w : words) {
-                if (w.getEng().equals(eng)) {
+                if (w.getEng().toLowerCase().equals(eng)) {
                     //SearchedWordLabel.setText(w.getEng() + " - " + w.getHun());
-                    HunSearchTbox.setText(w.getHun());
+                    HunSearchTbox.setText(w.getHun().toLowerCase());
                     hit = true;
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
         } else if (en && !hu) {
-            String hun = HunSearchTbox.getText();
+            String hun = HunSearchTbox.getText().toLowerCase();
+            HunSearchTbox.setText(hun);
             boolean hit = false;
             for (Word w : words) {
-                if (w.getHun().equals(hun)) {
+                if (w.getHun().toLowerCase().equals(hun)) {
                     //SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
-                    EngSearchTbox.setText(w.getEng());
+                    EngSearchTbox.setText(w.getEng().toLowerCase());
 
                     hit = true;
                 }
