@@ -9,7 +9,7 @@ public class EmptyCheck {
 
         return !en && !hu;
     }
-    // Ha a magyar üres, de az angol nem akkor igennel tér vissza
+    // If english search textbox not empty, return true
     public boolean hunEmpty(String eng, String hun){
         boolean en = !eng.isEmpty();
         boolean hu = hun.isEmpty();
@@ -18,8 +18,8 @@ public class EmptyCheck {
     }
     // Ha az angol üres igennel tér vissza
     public boolean engEmpty(String eng,String hun){
-        boolean en = eng.equals("");
-        boolean hu = !hun.equals("");
+        boolean en = eng.isEmpty();
+        boolean hu = !hun.isEmpty();
 
         return en && hu;
     }

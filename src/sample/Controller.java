@@ -71,25 +71,26 @@ public class Controller {
     public void SearchWord(ActionEvent e) {
         boolean en = EngSearchTbox.getText().isEmpty();
         boolean hu = HunSearchTbox.getText().isEmpty();
+        String eng = EngSearchTbox.getText();
+        String hun = HunSearchTbox.getText();
         ArrayList<Word> words = calfd.getAllWord();
-
-        if (ec.hunEmpty(EngSearchTbox.getText(),HunSearchTbox.getText())) {
-            String eng = EngSearchTbox.getText().toLowerCase();
+        // Translate hungarian to english
+        if (ec.hunEmpty(eng,hun)) {
+            String english = EngSearchTbox.getText().toLowerCase().trim();
             boolean hit = false;
             for (Word w : words) {
-                if (w.getEng().toLowerCase().equals(eng)) {
-                    //SearchedWordLabel.setText(w.getEng() + " - " + w.getHun());
+                if (w.getEng().toLowerCase().equals(english)) {
                     HunSearchTbox.setText(w.getHun().toLowerCase());
                     hit = true;
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
-        } else if (en && !hu) {
-            String hun = HunSearchTbox.getText().toLowerCase();
-            //HunSearchTbox.setText(hun);
+        // Translate english to hungarian
+        } else if (ec.engEmpty(eng,hun)) {
+            String hungarian = HunSearchTbox.getText().toLowerCase().trim();
             boolean hit = false;
             for (Word w : words) {
-                if (w.getHun().toLowerCase().equals(hun)) {
+                if (w.getHun().toLowerCase().equals(hungarian)) {
                     //SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
                     EngSearchTbox.setText(w.getEng().toLowerCase());
 
