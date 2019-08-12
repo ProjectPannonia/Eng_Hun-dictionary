@@ -4,16 +4,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="650.0" prefWidth="626.0"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="readFromFiles.Controller">
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="626.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="readFromFiles.Controller">
    <children>
-      <Label id = "TitleLabel" fx:id="TitleLabel" alignment="CENTER"
-             prefHeight="75.0" prefWidth="625.0" text="Label"
-             textFill="#80deea" stylesheets="@../css/style.css">
+      <Label id="TitleLabel" alignment="CENTER" prefHeight="75.0" prefWidth="625.0" text="Label" textFill="#80deea">
          <font>
             <Font size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="75.0" prefHeight="515.0" prefWidth="626.0" />
+      <Label id="TitleLabel" alignment="CENTER_RIGHT" layoutY="591.0" prefHeight="59.0" prefWidth="625.0" text="By LDS    2019. " textFill="#80deea">
+         <font>
+            <Font size="15.0" />
          </font>
       </Label>
    </children>
