@@ -34,3 +34,18 @@ to  {left:200px;}
     -fx-border-width:3;
     -fx-rotate:10;
 }
+#AnchorPane{
+    -fx-background-color: #009688; /* teal*/
+}
+#TitleLabel{
+    -fx-background-color: #00897b; /* teal darken-1 */
+}
+#menuVBox{
+    -fx-background-color: #009688; /* teal*/
+}
+#RightAnchorPane{
+    -fx-background-color: #009688; /* teal*/
+}
+#RightBottomVBox{
+    -fx-background-color: #009688; /* teal*/
+}
