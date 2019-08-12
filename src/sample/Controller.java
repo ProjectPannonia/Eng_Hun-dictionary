@@ -69,11 +69,15 @@ public class Controller {
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
-        boolean en = EngSearchTbox.getText().isEmpty();
-        boolean hu = HunSearchTbox.getText().isEmpty();
+        // Store English searchbox content
         String eng = EngSearchTbox.getText();
+
+        // Store Hungarian searchbox content
         String hun = HunSearchTbox.getText();
+
+        // Get all wordpair from the database
         ArrayList<Word> words = calfd.getAllWord();
+
         // Translate hungarian to english
         if (ec.hunEmpty(eng,hun)) {
             String english = EngSearchTbox.getText().toLowerCase().trim();
@@ -91,7 +95,6 @@ public class Controller {
             boolean hit = false;
             for (Word w : words) {
                 if (w.getHun().toLowerCase().equals(hungarian)) {
-                    //SearchedWordLabel.setText(w.getHun() + " - " + w.getEng());
                     EngSearchTbox.setText(w.getEng().toLowerCase());
 
                     hit = true;
