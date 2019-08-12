@@ -98,14 +98,17 @@ public class Controller {
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
-        } else if (!en && !hu) {
+
+            // All (search) fields not empty
+        } else if (ec.notEmpty(eng,hun)) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Hibás bevitel!");
             alert.setHeaderText("Mindkét mező adatot tartalmaz!");
             alert.setContentText("Kérlek csak a keresett szót írd be. A másik mezőből töröld az szöveget!");
             alert.showAndWait();
             System.out.println("Hibás bevitel! Mindkét mező adatot tartalmaz!");
-        } else if (en && hu) {
+            // All (search) field empty
+        } else if (ec.twoEmpty(eng,hun)) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Hibás bevitel!");
             alert.setHeaderText("Mindkét mező üres!");
