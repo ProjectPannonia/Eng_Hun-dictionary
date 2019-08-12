@@ -1,8 +1,6 @@
 package sample;
 
 import checkers.EmptyCheck;
-import checkers.EngEmptyCheck;
-import checkers.HunEmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -21,9 +19,6 @@ public class Controller {
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
     WordCounter wc = new WordCounter();
     EmptyCheck ec = new EmptyCheck();
-    EngEmptyCheck eec = new EngEmptyCheck();
-    HunEmptyCheck hec = new HunEmptyCheck();
-
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
     TextField EngSearchTbox,HunSearchTbox,EngWordAddTbox,HunWordAddTbox;
@@ -54,24 +49,32 @@ public class Controller {
 */
     @FXML
     public void addWordEng(ActionEvent e) {
-        String eng = EngWordAddTbox.getText();
-        String hun = HunWordAddTbox.getText();
+        String eng = EngWordAddTbox.getText().toLowerCase();
+        String hun = HunWordAddTbox.getText().toLowerCase();
 
-        if (ec.emptyCheck(eng,hun)) {
+        if (ec.twoEmpty(eng,hun)) {
             awe.addUserP(eng, hun);
             AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
             System.out.println("Sikeres adatküldés!");
         } else {
             System.out.println("A mezők értéke nem lehet null!");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Hibás bevitel!");
+            alert.setHeaderText("Mindkét beviteli mező üres!");
+            alert.setContentText("Kérlek a bal oldali mezőben add meg az angol, a jobb oldaliba pedig a magyar szót!");
+            alert.showAndWait();
+            System.out.println("Hibás bevitel, a mezők nem tartalmaznak értéket!");
         }
     }
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
+        boolean en = EngSearchTbox.getText().isEmpty();
+        boolean hu = HunSearchTbox.getText().isEmpty();
         ArrayList<Word> words = calfd.getAllWord();
-        if (eec.emptyCheck(EngSearchTbox.getText(),HunSearchTbox.getText())) {
+
+        if (!en && hu) {
             String eng = EngSearchTbox.getText().toLowerCase();
-            EngSearchTbox.setText(eng);
             boolean hit = false;
             for (Word w : words) {
                 if (w.getEng().toLowerCase().equals(eng)) {
@@ -81,9 +84,9 @@ public class Controller {
                 }
             }
             if(hit == false) SearchedWordLabel.setText("Nincs találat!");
-        } else if (hec.emptyCheck(EngSearchTbox.getText(),HunSearchTbox.getText())) {
+        } else if (en && !hu) {
             String hun = HunSearchTbox.getText().toLowerCase();
-            HunSearchTbox.setText(hun);
+            //HunSearchTbox.setText(hun);
             boolean hit = false;
             for (Word w : words) {
                 if (w.getHun().toLowerCase().equals(hun)) {
