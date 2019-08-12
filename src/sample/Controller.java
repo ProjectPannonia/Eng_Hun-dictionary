@@ -3,13 +3,19 @@ package sample;
 import checkers.EmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Controller {
@@ -39,14 +45,22 @@ public class Controller {
     Pane AncorPane;
     @FXML
     VBox menuVBox;
-/*
+
     @FXML
-    public void Browse(ActionEvent e){
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open a text file!");
-        fileChooser.showOpenDialog();
+    public void wordsFromFile(ActionEvent e){
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("readFromFiles/fromFile.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Read new words from file");
+            stage.setScene(new Scene(root,626,650));
+            stage.show();
+            ((Node)(e.getSource())).getScene().getWindow().hide();
+        }catch (IOException x){
+            x.printStackTrace();;
+        }
     }
-*/
+
     @FXML
     public void addWordEng(ActionEvent e) {
         String eng = EngWordAddTbox.getText().toLowerCase();
