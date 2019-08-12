@@ -127,8 +127,8 @@
             <Insets bottom="10.0" />
          </opaqueInsets>
       </Label>
-      <Button id="BrowseButton" fx:id="BrowseButton" layoutX="360.0" layoutY="535.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Browse" />
-      <Button id="AddNewWordButton" fx:id="AddNewWordButton" alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="480.0" mnemonicParsing="false" onAction="#addWordEng" stylesheets="@../css/style.css" text="Add the word">
+      <Button id="BrowseButton" fx:id="BrowseButton" layoutX="346.0" layoutY="536.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Browse" />
+      <Button id="AddNewWordButton" fx:id="AddNewWordButton" alignment="CENTER" contentDisplay="CENTER" layoutX="346.0" layoutY="474.0" mnemonicParsing="false" onAction="#addWordEng" stylesheets="@../css/style.css" text="Add the word">
          <font>
             <Font size="15.0" />
          </font>

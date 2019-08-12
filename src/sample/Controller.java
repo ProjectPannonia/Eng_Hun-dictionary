@@ -73,7 +73,7 @@ public class Controller {
         boolean hu = HunSearchTbox.getText().isEmpty();
         ArrayList<Word> words = calfd.getAllWord();
 
-        if (!en && hu) {
+        if (ec.hunEmpty(EngSearchTbox.getText(),HunSearchTbox.getText())) {
             String eng = EngSearchTbox.getText().toLowerCase();
             boolean hit = false;
             for (Word w : words) {
