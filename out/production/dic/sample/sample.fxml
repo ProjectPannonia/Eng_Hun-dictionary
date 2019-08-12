@@ -28,7 +28,7 @@
             <Bloom />
          </effect>
       </Label>
-      <VBox id="menuVBox" alignment="CENTER" layoutY="75.0" prefHeight="387.0" prefWidth="187.0" styleClass="menuVBox" stylesheets="@../css/style.css">
+      <VBox id="menuVBox" alignment="CENTER" layoutY="75.0" prefHeight="290.0" prefWidth="187.0" styleClass="menuVBox" stylesheets="@../css/style.css">
          <children>
             <Label alignment="CENTER" prefHeight="55.0" prefWidth="200.0" styleClass="LabelBlue" stylesheets="@../css/style.css" text="Hun - Eng" textFill="#80deea">
                <font>
@@ -43,16 +43,6 @@
             </Label>
             <Label prefHeight="26.0" prefWidth="192.0" />
             <Label prefHeight="8.0" prefWidth="192.0" />
-            <Label alignment="CENTER" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add new word" textFill="#80deea">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Button id="AddNewWordButton" fx:id="AddNewWordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addWordEng" stylesheets="@../css/style.css" text="Add the word">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
          </children>
       </VBox>
       <VBox id="RightVBox" alignment="CENTER" layoutX="192.0" layoutY="75.0" prefHeight="387.0" prefWidth="433.0" stylesheets="@../css/style.css">
@@ -97,11 +87,11 @@
                   <Insets left="5.0" right="5.0" />
                </VBox.margin>
             </VBox>
-            <SplitPane id="LeftBottomSplitPane" dividerPositions="0.5" focusTraversable="false" prefHeight="181.0" prefWidth="415.0" stylesheets="@../css/style.css">
+            <SplitPane id="LeftBottomSplitPane" dividerPositions="0.5" focusTraversable="false" prefHeight="172.0" prefWidth="423.0" stylesheets="@../css/style.css">
                <items>
-                  <VBox id="RightBottomVBox" prefHeight="243.0" prefWidth="204.0">
+                  <VBox id="RightBottomVBox" prefHeight="137.0" prefWidth="208.0">
                      <children>
-                        <Label prefHeight="54.0" prefWidth="204.0" stylesheets="@../css/style.css" />
+                        <Label prefHeight="65.0" prefWidth="204.0" stylesheets="@../css/style.css" />
                         <TextField id="EngWordAddTbox" fx:id="EngWordAddTbox" alignment="CENTER">
                            <font>
                               <Font size="15.0" />
@@ -114,7 +104,7 @@
                   </VBox>
                   <VBox id="RightBottomVBox" prefHeight="179.0" prefWidth="166.0" stylesheets="@../css/style.css">
                      <children>
-                        <Label prefHeight="56.0" prefWidth="203.0" />
+                        <Label prefHeight="67.0" prefWidth="203.0" />
                         <TextField id="HunWordAddTbox" fx:id="HunWordAddTbox" alignment="CENTER">
                            <font>
                               <Font size="15.0" />
@@ -137,6 +127,21 @@
             <Insets bottom="10.0" />
          </opaqueInsets>
       </Label>
-      <Button id="BrowseButton" fx:id="BrowseButton" layoutX="20.0" layoutY="517.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Browse" />
+      <Button id="BrowseButton" fx:id="BrowseButton" layoutX="360.0" layoutY="535.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="126.0" text="Browse" />
+      <Button id="AddNewWordButton" fx:id="AddNewWordButton" alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="480.0" mnemonicParsing="false" onAction="#addWordEng" stylesheets="@../css/style.css" text="Add the word">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="341.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add new word" textFill="#80deea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="530.0" prefHeight="48.0" prefWidth="192.0" stylesheets="@../css/style.css" text="Add words from file" textFill="#80deea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
