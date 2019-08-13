@@ -1,8 +1,8 @@
-package readFromFiles;
+package readfromfiles;
 
-import AddWordsFromFile.CreatingHashMapFromWords;
-import AddWordsFromFile.MyReader;
-import AddWordsFromFile.SendWordsFromArrayList;
+import addwordsfromfile.CreatingHashMapFromWords;
+import addwordsfromfile.MyReader;
+import addwordsfromfile.SendWordsFromArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.io.Reader;
 import java.util.HashMap;
 
 

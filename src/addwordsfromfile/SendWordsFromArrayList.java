@@ -1,12 +1,12 @@
-package AddWordsFromFile;
+package addwordsfromfile;
 
-import sample.addWordEng;
+import sample.AddWordEng;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SendWordsFromArrayList {
-    sample.addWordEng add = new addWordEng();
+    AddWordEng add = new AddWordEng();
 
     public void send(HashMap<String,String> map){
         for(Map.Entry<String,String> entry : map.entrySet()){

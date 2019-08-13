@@ -1,7 +1,6 @@
 package sample;
 
-import AddWordsFromFile.MyReader;
-import MyAlerts.MyAlerts;
+import myalerts.MyAlerts;
 import checkers.EmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,24 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Controller {
-    addWordEng awe = new addWordEng();
-    DB db = new DB();
-    SearchEngWord sew = new SearchEngWord();
-    CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
-    WordCounter wc = new WordCounter();
-    EmptyCheck ec = new EmptyCheck();
 
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
@@ -42,12 +31,7 @@ public class Controller {
 
     //The word is successfully added to the database
     @FXML
-    Label AddedLabel,SearchedWordLabel;
-
-    @FXML
-    Pane AncorPane;
-    @FXML
-    VBox menuVBox;
+    Label AddedLabel;
 
     @FXML
     public void wordsFromFile(ActionEvent e){
@@ -66,7 +50,9 @@ public class Controller {
 
     @FXML
     public void addWordEng(ActionEvent e) {
+        AddWordEng awe = new AddWordEng();
         MyAlerts myAlerts = new MyAlerts();
+        EmptyCheck ec = new EmptyCheck();
         String eng = EngWordAddTbox.getText().toLowerCase();
         String hun = HunWordAddTbox.getText().toLowerCase();
             if(ec.twoEmpty(eng,hun)){
@@ -77,7 +63,6 @@ public class Controller {
                 myAlerts.hunAddEmpty();
             }else {
                 awe.addUserP(eng, hun);
-                AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
                 System.out.println("Sikeres adatküldés!");
             }
     }
@@ -85,6 +70,9 @@ public class Controller {
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
+        EmptyCheck ec = new EmptyCheck();
+        WordCounter wc = new WordCounter();
+        CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
         // Store English searchbox content
         String eng = EngSearchTbox.getText();
 

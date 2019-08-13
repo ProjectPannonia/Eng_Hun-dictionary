@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -23,7 +22,7 @@ public class Main extends Application {
 
         CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxmls/sample.fxml"));
         primaryStage.setTitle("Dictionary by SLD");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

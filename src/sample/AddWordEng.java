@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class addWordEng {
+public class AddWordEng {
     DB db = new DB();
     Word w = new Word();
     PreparedStatement ps = null;

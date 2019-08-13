@@ -1,4 +1,4 @@
-package AddWordsFromFile;
+package addwordsfromfile;
 
 import java.util.HashMap;
 

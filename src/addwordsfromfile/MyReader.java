@@ -1,4 +1,4 @@
-package AddWordsFromFile;
+package addwordsfromfile;
 
 
 import java.io.BufferedReader;
