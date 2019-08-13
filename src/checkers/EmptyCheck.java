@@ -30,4 +30,9 @@ public class EmptyCheck {
 
         return en && hu;
     }
+    public boolean engAddEmpty(String eng,String hun){
+        boolean en = eng.isEmpty();
+        boolean hu = !hun.isEmpty();
+        return en && hu;
+    }
 }

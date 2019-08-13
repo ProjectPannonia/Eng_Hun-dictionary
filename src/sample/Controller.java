@@ -1,5 +1,7 @@
 package sample;
 
+import AddWordsFromFile.MyReader;
+import MyAlerts.MyAlerts;
 import checkers.EmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +27,7 @@ public class Controller {
     CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
     WordCounter wc = new WordCounter();
     EmptyCheck ec = new EmptyCheck();
+
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
     TextField EngSearchTbox,HunSearchTbox,EngWordAddTbox,HunWordAddTbox;
@@ -63,23 +66,22 @@ public class Controller {
 
     @FXML
     public void addWordEng(ActionEvent e) {
+        MyAlerts myAlerts = new MyAlerts();
         String eng = EngWordAddTbox.getText().toLowerCase();
         String hun = HunWordAddTbox.getText().toLowerCase();
-
-        if (ec.twoEmpty(eng,hun)) {
-            awe.addUserP(eng, hun);
-            AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
-            System.out.println("Sikeres adatküldés!");
-        } else {
-            System.out.println("A mezők értéke nem lehet null!");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hibás bevitel!");
-            alert.setHeaderText("Mindkét beviteli mező üres!");
-            alert.setContentText("Kérlek a bal oldali mezőben add meg az angol, a jobb oldaliba pedig a magyar szót!");
-            alert.showAndWait();
-            System.out.println("Hibás bevitel, a mezők nem tartalmaznak értéket!");
-        }
+            if(ec.twoEmpty(eng,hun)){
+                myAlerts.addWordNull();
+            }else if(ec.engAddEmpty(eng,hun)) {
+                myAlerts.engAddEmpty();
+            }else if(ec.hunEmpty(eng,hun)){
+                myAlerts.hunAddEmpty();
+            }else {
+                awe.addUserP(eng, hun);
+                AddedLabel.setText(eng + " - " + hun + "\n" + "Added!");
+                System.out.println("Sikeres adatküldés!");
+            }
     }
+
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
@@ -102,16 +104,12 @@ public class Controller {
                         hit = true;
                     }
                 }
+                // If word not on the database
                 if(hit != true) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Hiba!");
-                    alert.setHeaderText("Nincs találat!");
-                    alert.setContentText("A keresett szót nem tartalmazza az adatbázis!");
-                    alert.showAndWait();
+                    MyAlerts myAlerts = new MyAlerts();
+                    myAlerts.hit();
                 }
 
-
-            //if(hit == false) SearchedWordLabel.setText("Nincs találat!");
         // Translate english to hungarian
         } else if (ec.engEmpty(eng,hun)) {
             String hungarian = HunSearchTbox.getText().toLowerCase().trim();
@@ -123,30 +121,21 @@ public class Controller {
                     hit = true;
                 }
             }
+            // If word not on the database
             if(hit != true) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Hiba!");
-                alert.setHeaderText("Nincs találat!");
-                alert.setContentText("A keresett szót nem tartalmazza az adatbázis!");
-                alert.showAndWait();
+                MyAlerts myAlerts = new MyAlerts();
+                myAlerts.hit();
+
             }
 
             // All (search) fields not empty
         } else if (ec.notEmpty(eng,hun)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hibás bevitel!");
-            alert.setHeaderText("Mindkét mező adatot tartalmaz!");
-            alert.setContentText("Kérlek csak a keresett szót írd be. A másik mezőből töröld az szöveget!");
-            alert.showAndWait();
-            System.out.println("Hibás bevitel! Mindkét mező adatot tartalmaz!");
+            MyAlerts myAlerts = new MyAlerts();
+            myAlerts.alertNotEmpty();
             // All (search) field empty
         } else if (ec.twoEmpty(eng,hun)) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hibás bevitel!");
-            alert.setHeaderText("Mindkét mező üres!");
-            alert.setContentText("Valamelyik mezőbe írd be a nyelvnek megfelelő keresett szót!");
-            alert.showAndWait();
-            System.out.println("Hibás bevitel! Mindkét mező üres!");
+            MyAlerts myAlerts = new MyAlerts();
+            myAlerts.alertTwoEmpty();
         }
         System.out.println(wc.WordCounter());
     }
