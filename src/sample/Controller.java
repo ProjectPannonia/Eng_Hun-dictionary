@@ -96,13 +96,22 @@ public class Controller {
         if (ec.hunEmpty(eng,hun)) {
             String english = EngSearchTbox.getText().toLowerCase().trim();
             boolean hit = false;
-            for (Word w : words) {
-                if (w.getEng().toLowerCase().equals(english)) {
-                    HunSearchTbox.setText(w.getHun().toLowerCase());
-                    hit = true;
+                for (Word w : words) {
+                    if (w.getEng().toLowerCase().equals(english)) {
+                        HunSearchTbox.setText(w.getHun().toLowerCase());
+                        hit = true;
+                    }
                 }
-            }
-            if(hit == false) SearchedWordLabel.setText("Nincs találat!");
+                if(hit != true) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Hiba!");
+                    alert.setHeaderText("Nincs találat!");
+                    alert.setContentText("A keresett szót nem tartalmazza az adatbázis!");
+                    alert.showAndWait();
+                }
+
+
+            //if(hit == false) SearchedWordLabel.setText("Nincs találat!");
         // Translate english to hungarian
         } else if (ec.engEmpty(eng,hun)) {
             String hungarian = HunSearchTbox.getText().toLowerCase().trim();
@@ -114,7 +123,13 @@ public class Controller {
                     hit = true;
                 }
             }
-            if(hit == false) SearchedWordLabel.setText("Nincs találat!");
+            if(hit != true) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Hiba!");
+                alert.setHeaderText("Nincs találat!");
+                alert.setContentText("A keresett szót nem tartalmazza az adatbázis!");
+                alert.showAndWait();
+            }
 
             // All (search) fields not empty
         } else if (ec.notEmpty(eng,hun)) {
