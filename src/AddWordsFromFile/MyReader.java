@@ -5,8 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Reader {
-    public String[] Reader(String path){
+public class MyReader {
+    public String[] Reader(String path) throws IOException{
         String str;
         String[] tokens = null;
 
@@ -14,8 +14,6 @@ public class Reader {
             while ((str = in.readLine()) != null){
                 tokens = str.split(",");
             }
-        }catch (IOException e){
-            System.out.println("File not found!");
         }
         return tokens;
     }

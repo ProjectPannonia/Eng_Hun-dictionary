@@ -5,8 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/dic/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/AddWordsFromFile/Reader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/readFromFiles/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/readFromFiles/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dic/readFromFiles/fromFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/readFromFiles/fromFile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddWordsFromFile/CreatingHashMapFromWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddWordsFromFile/CreatingHashMapFromWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddWordsFromFile/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddWordsFromFile/MyReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readFromFiles/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/readFromFiles/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readFromFiles/fromFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/readFromFiles/fromFile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/libraries/Derby.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/FirstConnection.iml" beforeDir="false" />

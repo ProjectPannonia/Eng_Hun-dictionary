@@ -3,6 +3,7 @@ package AddWordsFromFile;
 import java.util.HashMap;
 
 public class CreatingHashMapFromWords {
+
     public HashMap createHashMap(String[] array){
         HashMap<String,String> created = new HashMap<>();
         String eng = null;
