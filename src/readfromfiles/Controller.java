@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import myalerts.MyAlerts;
 import sample.Main;
 
 import java.io.IOException;
@@ -50,12 +51,8 @@ public class Controller {
             send.send(hashMap);
             InfoLabel.setText("Sikeres beolvasás!");
         }catch (IOException q){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hibás bevitel a fájlból olvasásnál!");
-            alert.setHeaderText("Az elérési út, vagy a fájlnév hibás!");
-            alert.setContentText("Kérlek ellenőrizd a megadott adatokat!");
-            alert.showAndWait();
+            MyAlerts alerts = new MyAlerts();
+            alerts.readError();
         }
-
     }
 }

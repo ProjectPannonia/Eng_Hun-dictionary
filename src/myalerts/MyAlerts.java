@@ -57,4 +57,11 @@ public class MyAlerts {
         alert.setContentText("Kérlek adj meg másik szó párt!");
         alert.showAndWait();
     }
+    public void readError(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Hibás bevitel!");
+        alert.setHeaderText("Fájlból olvasás sikertelen!");
+        alert.setContentText("Kérlek ellenőrizd a megadott adatokat!");
+        alert.showAndWait();
+    }
 }
