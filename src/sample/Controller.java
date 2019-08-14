@@ -53,6 +53,9 @@ public class Controller {
         AddWordEng awe = new AddWordEng();
         MyAlerts myAlerts = new MyAlerts();
         EmptyCheck ec = new EmptyCheck();
+        PairChecker pairCheck = new PairChecker();
+        CreateArraylistFromDatabase createList = new CreateArraylistFromDatabase();
+        ArrayList<Word> list = createList.getAllWord();
         String eng = EngWordAddTbox.getText().toLowerCase();
         String hun = HunWordAddTbox.getText().toLowerCase();
             if(ec.twoEmpty(eng,hun)){
@@ -61,7 +64,7 @@ public class Controller {
                 myAlerts.engAddEmpty();
             }else if(ec.hunEmpty(eng,hun)){
                 myAlerts.hunAddEmpty();
-            }else {
+            }else if(!pairCheck.checkIfExistingPair(list,eng,hun)) {
                 awe.addUserP(eng, hun);
                 System.out.println("Sikeres adatküldés!");
             }

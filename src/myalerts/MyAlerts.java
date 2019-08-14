@@ -50,4 +50,11 @@ public class MyAlerts {
         alert.setContentText("Kérlek add meg a megfelelő angol szót!");
         alert.showAndWait();
     }
+    public void alreadyExistPair(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Hiba!");
+        alert.setHeaderText("A megadott szó pár már megtalálható a szótárban!");
+        alert.setContentText("Kérlek adj meg másik szó párt!");
+        alert.showAndWait();
+    }
 }
