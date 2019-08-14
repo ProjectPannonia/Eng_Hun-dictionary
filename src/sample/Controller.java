@@ -37,12 +37,12 @@ public class Controller {
     public void wordsFromFile(ActionEvent e){
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("readFromFiles/fromFile.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("fxmls/fromFile.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Read new words from file");
             stage.setScene(new Scene(root,626,650));
             stage.show();
-            ((Node)(e.getSource())).getScene().getWindow().hide();
+            ((Node)(e.getSource())).getScene().getWindow();
         }catch (IOException x){
             x.printStackTrace();;
         }

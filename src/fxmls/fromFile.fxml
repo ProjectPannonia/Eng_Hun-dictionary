@@ -15,7 +15,7 @@
       </Label>
       <AnchorPane layoutY="75.0" prefHeight="515.0" prefWidth="626.0">
          <children>
-            <Button id="BackButton" fx:id="BackButton" layoutX="248.0" layoutY="466.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="113.0" text="Back" />
+            <Button id="CloseButton" fx:id="CloseButton" layoutX="248.0" layoutY="466.0" mnemonicParsing="false"  onAction="#handleCloseButton" prefHeight="37.0" prefWidth="113.0" text="Back" />
             <TextField id="PathToFileTextField" fx:id="PathToFileTextField" layoutX="14.0" layoutY="68.0" prefHeight="25.0" prefWidth="202.0" promptText="Path to the file">
                <font>
                   <Font size="15.0" />

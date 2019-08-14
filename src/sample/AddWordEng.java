@@ -6,9 +6,7 @@ import java.sql.Statement;
 
 public class AddWordEng {
     DB db = new DB();
-    Word w = new Word();
     PreparedStatement ps = null;
-    Statement cst = null;
 
     public void addUserP(String eng, String hun){
         try {

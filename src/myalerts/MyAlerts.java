@@ -1,6 +1,7 @@
 package myalerts;
 
 import javafx.scene.control.Alert;
+import sample.DB;
 
 public class MyAlerts {
     public void alertNotEmpty(){

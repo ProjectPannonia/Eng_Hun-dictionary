@@ -10,7 +10,9 @@ public class SendWordsFromArrayList {
 
     public void send(HashMap<String,String> map){
         for(Map.Entry<String,String> entry : map.entrySet()){
-            add.addUserP(entry.getKey(),entry.getValue());
+            if(entry.getKey() != null && !entry.getKey().equals("") && entry.getValue() != null && !entry.getValue().equals("")) {
+                add.addUserP(entry.getKey(), entry.getValue());
+            }
         }
     }
 }

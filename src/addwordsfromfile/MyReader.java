@@ -11,8 +11,8 @@ public class MyReader {
         String[] tokens = null;
 
         try(BufferedReader in = new BufferedReader(new FileReader(path))){
-            while ((str = in.readLine()) != null){
-                tokens = str.split(",");
+            while ((str = in.readLine()) != null && !str.equals("")){
+                tokens = str.split(" ");
             }
         }
         return tokens;
