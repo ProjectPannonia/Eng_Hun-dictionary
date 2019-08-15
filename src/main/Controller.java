@@ -1,10 +1,10 @@
 package main;
 
 import main.send.SendSimpleWordPair;
-import main.checkers.PairChecker;
-import main.creators.CreateArraylistFromDatabase;
+import main.checker.PairChecker;
+import main.creator.CreateArraylistFromDatabase;
 import main.myalerts.MyAlerts;
-import main.checkers.EmptyCheck;
+import main.checker.EmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +15,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.translate.ToEnglish;
+import main.translate.ToHungarian;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -65,7 +68,7 @@ public class Controller {
                 myAlerts.addWordNull();
             }else if(ec.engAddEmpty(eng,hun)) {
                 myAlerts.engAddEmpty();
-            }else if(ec.hunEmpty(eng,hun)){
+            }else if(ec.searchHunWord(eng,hun)){
                 myAlerts.hunAddEmpty();
             }else if(!pairCheck.checkIfExistingPair(list,eng,hun)) {
                 awe.addUserP(eng, hun);
@@ -76,9 +79,9 @@ public class Controller {
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
-        EmptyCheck ec = new EmptyCheck();
-        WordCounter wc = new WordCounter();
-        CreateArraylistFromDatabase calfd = new CreateArraylistFromDatabase();
+        EmptyCheck emptyCheck = new EmptyCheck();
+        WordCounter wordCounter = new WordCounter();
+        CreateArraylistFromDatabase database = new CreateArraylistFromDatabase();
         // Store English searchbox content
         String eng = EngSearchTbox.getText();
 
@@ -86,51 +89,48 @@ public class Controller {
         String hun = HunSearchTbox.getText();
 
         // Get all wordpair from the database
-        ArrayList<Word> words = calfd.getAllWord();
+        ArrayList<Word> words = database.getAllWord();
 
         // Translate hungarian to english
-        if (ec.hunEmpty(eng,hun)) {
-            String english = EngSearchTbox.getText().toLowerCase().trim();
+        if (emptyCheck.searchHunWord(eng,hun)) {
+            //String hungarian = HunSearchTbox.getText().toLowerCase().trim();
+            ToHungarian toHungarian = new ToHungarian();
+
+            String hu = toHungarian.translate(eng);
             boolean hit = false;
-                for (Word w : words) {
-                    if (w.getEng().toLowerCase().equals(english)) {
-                        HunSearchTbox.setText(w.getHun().toLowerCase());
-                        hit = true;
-                    }
-                }
-                // If word not on the database
-                if(hit != true) {
+            if (hu != null){
+                hit = true;
+                HunSearchTbox.setText(hu);
+            }
+                // If word not in the database
+                if(hit == false) {
                     MyAlerts myAlerts = new MyAlerts();
                     myAlerts.hit();
                 }
 
         // Translate english to hungarian
-        } else if (ec.engEmpty(eng,hun)) {
-            String hungarian = HunSearchTbox.getText().toLowerCase().trim();
+        } else if (emptyCheck.searchEngWord(eng,hun)) {
+            ToEnglish toEnglish = new ToEnglish();
+            String english = toEnglish.translate(hun);
             boolean hit = false;
-            for (Word w : words) {
-                if (w.getHun().toLowerCase().equals(hungarian)) {
-                    EngSearchTbox.setText(w.getEng().toLowerCase());
-
-                    hit = true;
-                }
+            if(english != null){
+                hit = true;
+                EngSearchTbox.setText(english);
             }
-            // If word not on the database
-            if(hit != true) {
+            if (hit == false){
                 MyAlerts myAlerts = new MyAlerts();
                 myAlerts.hit();
-
             }
 
             // All (search) fields not empty
-        } else if (ec.notEmpty(eng,hun)) {
+        } else if (emptyCheck.notEmpty(eng,hun)) {
             MyAlerts myAlerts = new MyAlerts();
             myAlerts.alertNotEmpty();
             // All (search) field empty
-        } else if (ec.twoEmpty(eng,hun)) {
+        } else if (emptyCheck.twoEmpty(eng,hun)) {
             MyAlerts myAlerts = new MyAlerts();
             myAlerts.alertTwoEmpty();
         }
-        System.out.println(wc.WordCounter());
+        System.out.println(wordCounter.WordCounter());
     }
 }

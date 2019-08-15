@@ -1,6 +1,6 @@
 package main;
 
-import main.creators.CreateArraylistFromDatabase;
+import main.creator.CreateArraylistFromDatabase;
 import main.database.DB;
 
 import java.util.ArrayList;

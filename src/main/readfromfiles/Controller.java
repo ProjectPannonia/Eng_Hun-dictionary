@@ -1,6 +1,6 @@
 package main.readfromfiles;
 
-import main.creators.CreatingHashMapFromWords;
+import main.creator.CreatingHashMapFromWords;
 import main.reader.MyReader;
 import main.send.SendWordsFromArrayList;
 import javafx.event.ActionEvent;

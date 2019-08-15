@@ -1,4 +1,4 @@
-package main.creators;
+package main.creator;
 
 import java.util.HashMap;
 

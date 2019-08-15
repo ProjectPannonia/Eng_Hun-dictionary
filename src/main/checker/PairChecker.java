@@ -1,4 +1,4 @@
-package main.checkers;
+package main.checker;
 
 import main.myalerts.MyAlerts;
 import main.Word;

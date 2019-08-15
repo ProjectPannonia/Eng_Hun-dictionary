@@ -1,4 +1,4 @@
-package main.creators;
+package main.creator;
 
 import main.database.DB;
 import main.Word;

@@ -1,4 +1,4 @@
-package main.checkers;
+package main.checker;
 
 public class EmptyCheck {
 
@@ -9,15 +9,15 @@ public class EmptyCheck {
 
         return en && hu;
     }
-    // If english search textbox not empty, return true
-    public boolean hunEmpty(String eng, String hun){
+    // If english search textbox contain something, return true
+    public boolean searchHunWord(String eng, String hun){
         boolean en = !eng.isEmpty();
         boolean hu = hun.isEmpty();
 
         return en && hu;
     }
     // Ha az angol üres igennel tér vissza
-    public boolean engEmpty(String eng,String hun){
+    public boolean searchEngWord(String eng, String hun){
         boolean en = eng.isEmpty();
         boolean hu = !hun.isEmpty();
 

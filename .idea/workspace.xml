@@ -5,27 +5,47 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/dic/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/MyAlerts/MyAlerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/MyAlerts/MyAlerts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/readFromFiles/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/readFromFiles/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/sample/PairChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/addwordsfromfile/CreatingHashMapFromWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/creators/CreatingHashMapFromWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/addwordsfromfile/MyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/reader/MyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/addwordsfromfile/SendWordsFromArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/send/SendWordsFromArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkers/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/checkers/EmptyCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxmls/fromFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxmls/fromFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myalerts/MyAlerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/myalerts/MyAlerts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readfromfiles/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/readfromfiles/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AddWordEng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/send/SendSimpleWordPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/CreateArraylistFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/creators/CreateArraylistFromDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/database/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/PairChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/checkers/PairChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SearchEngWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/unused/SearchEngWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SearchHunWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/unused/SearchHunWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/WordCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/WordCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c150.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c161.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c180.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c230.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c241.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c380.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c391.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c490.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dic/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dic/service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/WordCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/WordCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checkers/EmptyCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checkers/PairChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/creators/CreateArraylistFromDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/creators/CreatingHashMapFromWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WordCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WordCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/checkers/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/EmptyCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/checkers/PairChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/PairChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/creators/CreateArraylistFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/creator/CreateArraylistFromDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/creators/CreatingHashMapFromWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/creator/CreatingHashMapFromWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/libraries/Derby.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FirstConnection/FirstConnection.iml" beforeDir="false" />
@@ -170,7 +190,7 @@
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javaFX\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.checkers.*" />
+          <option name="PATTERN" value="main.checker.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -234,6 +254,7 @@
       <workItem from="1564335081581" duration="16000" />
       <workItem from="1564335124699" duration="589000" />
       <workItem from="1565542942480" duration="3087000" />
+      <workItem from="1565890369167" duration="586000" />
     </task>
     <servers />
   </component>
