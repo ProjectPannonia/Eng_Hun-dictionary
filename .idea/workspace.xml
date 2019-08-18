@@ -5,40 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/dic/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/dic/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c180.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c1b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c380.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c391.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c3b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dic/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dic/service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checker/PairChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/checker/PairChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/send/SendWordsFromArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/send/SendWordsFromArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checker/EmptyCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/checker/EmptyCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/myalerts/MyAlerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/myalerts/MyAlerts.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/checker/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/EmptyCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/checker/PairChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/PairChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/myalerts/MyAlerts.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/send/SendWordsFromArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/send/SendWordsFromArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/translate/ToEnglish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/translate/ToEnglish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/translate/ToHungarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/translate/ToHungarian.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,8 +68,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

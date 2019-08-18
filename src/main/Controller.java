@@ -1,10 +1,10 @@
 package main;
 
+import main.checker.*;
+import main.checker.EngAddEmpty;
+import main.myalerts.*;
 import main.send.SendSimpleWordPair;
-import main.checker.PairChecker;
 import main.creator.CreateArraylistFromDatabase;
-import main.myalerts.MyAlerts;
-import main.checker.EmptyCheck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 import main.translate.ToEnglish;
 import main.translate.ToHungarian;
 import main.translate.Translate;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -58,19 +57,19 @@ public class Controller {
     @FXML
     public void addWordEng(ActionEvent e) {
         SendSimpleWordPair awe = new SendSimpleWordPair();
-        MyAlerts myAlerts = new MyAlerts();
         EmptyCheck ec = new EmptyCheck();
         PairChecker pairCheck = new PairChecker();
         CreateArraylistFromDatabase createList = new CreateArraylistFromDatabase();
         ArrayList<Word> list = createList.getAllWord();
         String eng = EngWordAddTbox.getText().toLowerCase();
         String hun = HunWordAddTbox.getText().toLowerCase();
-            if(ec.twoEmpty(eng,hun)){
-                myAlerts.addWordNull();
-            }else if(ec.engAddEmpty(eng,hun)) {
-                myAlerts.engAddEmpty();
-            }else if(ec.searchHunWord(eng,hun)){
-                myAlerts.hunAddEmpty();
+
+            if(new TwoEmptyField().check(eng,hun)){
+                new AlertAddWordNull().SendAlert();
+            }else if(new EngAddEmpty().check(eng,hun)) {
+                new AlertEngAddEmpty().SendAlert();
+            }else if(new SearchHunWord().check(eng,hun)){
+                new AlertHunAddEmpty().SendAlert();
             }else if(!pairCheck.checkIfExistingPair(list,eng,hun)) {
                 awe.addUserP(eng, hun);
                 System.out.println("Sikeres adatküldés!");
@@ -93,10 +92,9 @@ public class Controller {
         ArrayList<Word> words = database.getAllWord();
 
         // Translate hungarian to english
-        if (emptyCheck.searchHunWord(eng,hun)) {
+        if (new SearchHunWord().check(eng,hun)) {
             //String hungarian = HunSearchTbox.getText().toLowerCase().trim();
             Translate toHungarian = new ToHungarian();
-
             String hu = toHungarian.translate(eng);
             boolean hit = false;
             if (hu != null){
@@ -105,12 +103,11 @@ public class Controller {
             }
                 // If word not in the database
                 if(hit == false) {
-                    MyAlerts myAlerts = new MyAlerts();
-                    myAlerts.hit();
+                    new AlertHit().SendAlert();
                 }
 
         // Translate english to hungarian
-        } else if (emptyCheck.searchEngWord(eng,hun)) {
+        } else if (new SearchEngWord().check(eng,hun)) {
             Translate toEnglish = new ToEnglish();
             String english = toEnglish.translate(hun);
             boolean hit = false;
@@ -119,18 +116,13 @@ public class Controller {
                 EngSearchTbox.setText(english);
             }
             if (hit == false){
-                MyAlerts myAlerts = new MyAlerts();
-                myAlerts.hit();
+                new AlertHit().SendAlert();
             }
-
             // All (search) fields not empty
-        } else if (emptyCheck.notEmpty(eng,hun)) {
-            MyAlerts myAlerts = new MyAlerts();
-            myAlerts.alertNotEmpty();
-            // All (search) field empty
-        } else if (emptyCheck.twoEmpty(eng,hun)) {
-            MyAlerts myAlerts = new MyAlerts();
-            myAlerts.alertTwoEmpty();
+        } else if (new NotEmpty().check(eng,hun)) {
+            new Alertnotempty().SendAlert();
+        } else if (new TwoEmptyField().check(eng,hun)) {
+            new AlertTwoEmpty().SendAlert();
         }
         System.out.println(wordCounter.WordCounter());
     }

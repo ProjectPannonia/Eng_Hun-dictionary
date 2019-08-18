@@ -4,6 +4,7 @@ import main.Word;
 import main.checker.PairChecker;
 import main.creator.CreateArraylistFromDatabase;
 import main.creator.CreatingHashMapFromWords;
+import main.myalerts.ReadError;
 import main.reader.MyReader;
 import main.send.SendWordsFromArrayList;
 import javafx.event.ActionEvent;
@@ -12,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import main.myalerts.MyAlerts;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,8 +55,7 @@ public class Controller {
             send.send(duplicatedRemoved);
             InfoLabel.setText("Sikeres beolvasás!");
         }catch (IOException q){
-            MyAlerts alerts = new MyAlerts();
-            alerts.readError();
+            new ReadError().SendAlert();
         }
     }
 }

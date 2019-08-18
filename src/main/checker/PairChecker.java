@@ -1,6 +1,6 @@
 package main.checker;
 
-import main.myalerts.MyAlerts;
+import main.myalerts.AlreadyExistPair;
 import main.Word;
 
 import java.util.ArrayList;
@@ -8,13 +8,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PairChecker {
-    MyAlerts alerts = new MyAlerts();
 
     public boolean checkIfExistingPair(ArrayList<Word> list, String eng, String hun){
         boolean flag = false;
         for(Word w : list){
             if(w.getEng().equals(eng) && w.getHun().equals(hun)) {
-                alerts.alreadyExistPair();
+                new AlreadyExistPair().SendAlert();
                 flag = true;
                 break;
             }
