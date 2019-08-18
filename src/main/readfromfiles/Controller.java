@@ -1,5 +1,8 @@
 package main.readfromfiles;
 
+import main.Word;
+import main.checker.PairChecker;
+import main.creator.CreateArraylistFromDatabase;
 import main.creator.CreatingHashMapFromWords;
 import main.reader.MyReader;
 import main.send.SendWordsFromArrayList;
@@ -12,6 +15,7 @@ import javafx.stage.Stage;
 import main.myalerts.MyAlerts;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -35,15 +39,20 @@ public class Controller {
 
     @FXML
     public void addFromFile(ActionEvent e){
+        CreateArraylistFromDatabase createFromDatabese = new CreateArraylistFromDatabase();
+        ArrayList<Word> databaseWords = createFromDatabese.getAllWord();
         MyReader reader = new MyReader();
         String path = PathToFileTextField.getText().trim();
         SendWordsFromArrayList send = new SendWordsFromArrayList();
+        HashMap<String,String> duplicatedRemoved;
+        PairChecker paircheck = new PairChecker();
         String[] stringArray = null;
         HashMap<String,String> hashMap = null;
         try {
             stringArray = reader.Reader(path);
             hashMap = createHashMap.createHashMap(stringArray);
-            send.send(hashMap);
+            duplicatedRemoved = paircheck.checkPairFileRead(databaseWords,hashMap);
+            send.send(duplicatedRemoved);
             InfoLabel.setText("Sikeres beolvasás!");
         }catch (IOException q){
             MyAlerts alerts = new MyAlerts();

@@ -30,28 +30,15 @@
       <change beforePath="$PROJECT_DIR$/dic/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/c90.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dic/seg0/ca1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dic/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dic/service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/WordCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/WordCounter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checkers/EmptyCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checkers/PairChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/creators/CreateArraylistFromDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dic/main/creators/CreatingHashMapFromWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/checker/PairChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/checker/PairChecker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/readfromfiles/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dic/main/send/SendWordsFromArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dic/main/send/SendWordsFromArrayList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WordCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WordCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/checkers/EmptyCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/EmptyCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/checkers/PairChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/PairChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/creators/CreateArraylistFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/creator/CreateArraylistFromDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/creators/CreatingHashMapFromWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/creator/CreatingHashMapFromWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/checker/PairChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/checker/PairChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/readfromfiles/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/libraries/Derby.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FirstConnection/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FirstConnection/FirstConnection.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lotto/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lotto/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PostgreSQLJDBC/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PostgreSQLJDBC/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PostgreSQLJDBC/src/com/postgresqltutorial/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PostgreSQLJDBC/src/com/postgresqltutorial/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/send/SendWordsFromArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/send/SendWordsFromArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/translate/ToEnglish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/translate/ToEnglish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/translate/ToHungarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/translate/ToHungarian.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +95,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -139,13 +127,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PATH_TO_FX$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.2837838" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

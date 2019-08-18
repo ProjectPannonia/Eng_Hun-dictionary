@@ -17,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.translate.ToEnglish;
 import main.translate.ToHungarian;
+import main.translate.Translate;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -94,7 +95,7 @@ public class Controller {
         // Translate hungarian to english
         if (emptyCheck.searchHunWord(eng,hun)) {
             //String hungarian = HunSearchTbox.getText().toLowerCase().trim();
-            ToHungarian toHungarian = new ToHungarian();
+            Translate toHungarian = new ToHungarian();
 
             String hu = toHungarian.translate(eng);
             boolean hit = false;
@@ -110,7 +111,7 @@ public class Controller {
 
         // Translate english to hungarian
         } else if (emptyCheck.searchEngWord(eng,hun)) {
-            ToEnglish toEnglish = new ToEnglish();
+            Translate toEnglish = new ToEnglish();
             String english = toEnglish.translate(hun);
             boolean hit = false;
             if(english != null){

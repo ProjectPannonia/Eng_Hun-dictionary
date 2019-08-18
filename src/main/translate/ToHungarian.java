@@ -1,21 +1,15 @@
 package main.translate;
 
 import main.Word;
-import main.creator.CreateArraylistFromDatabase;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+public class ToHungarian implements Translate {
 
-public class ToHungarian {
-
-    CreateArraylistFromDatabase createArraylist = new CreateArraylistFromDatabase();
-    ArrayList<Word> list = createArraylist.getAllWord();
-
-    public String translate(String eng){
+    @Override
+    public String translate(String searchedWord) {
         String hun = null;
 
         for(Word w : list){
-            if(w.getEng().toLowerCase().equals(eng)){
+            if(w.getEng().toLowerCase().equals(searchedWord)){
                 hun = w.getHun().toLowerCase();
             }
         }
