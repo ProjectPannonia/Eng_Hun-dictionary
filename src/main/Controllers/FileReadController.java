@@ -1,4 +1,4 @@
-package main.readfromfiles;
+package main.Controllers;
 
 import main.Word;
 import main.checker.PairChecker;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class Controller {
+public class FileReadController {
 
     @FXML
     Button CloseButton, AddTheWordsButton;

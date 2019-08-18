@@ -1,5 +1,7 @@
-package main;
+package main.Controllers;
 
+import main.Word;
+import main.WordCounter;
 import main.checker.*;
 import main.checker.EngAddEmpty;
 import main.myalerts.*;
@@ -21,7 +23,7 @@ import main.translate.Translate;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Controller {
+public class MainController {
 
     //Search box one, Search box two,Add new hungarian word here,Add new english word here
     @FXML
