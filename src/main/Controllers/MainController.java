@@ -81,7 +81,6 @@ public class MainController {
     // Search button method
     @FXML
     public void SearchWord(ActionEvent e) {
-        EmptyCheck emptyCheck = new EmptyCheck();
         WordCounter wordCounter = new WordCounter();
         CreateArraylistFromDatabase database = new CreateArraylistFromDatabase();
         // Store English searchbox content

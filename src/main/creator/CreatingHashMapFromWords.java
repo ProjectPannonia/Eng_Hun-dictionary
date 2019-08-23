@@ -10,8 +10,13 @@ public class CreatingHashMapFromWords {
         String hun = null;
 
         for (int i = 0; i < array.length; i++){
-            if(i % 2 == 0)eng = array[i];
-            else hun = array[i];
+            if(i % 2 == 0){
+                eng = array[i];
+            }
+            else {
+                hun = array[i];
+            }
+
             created.put(eng,hun);
         }
         return created;

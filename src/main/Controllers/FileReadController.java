@@ -2,6 +2,7 @@ package main.Controllers;
 
 import main.Word;
 import main.checker.PairChecker;
+import main.creator.ArraylistToHashmap;
 import main.creator.CreateArraylistFromDatabase;
 import main.creator.CreatingHashMapFromWords;
 import main.myalerts.ReadError;
@@ -39,19 +40,34 @@ public class FileReadController {
 
     @FXML
     public void addFromFile(ActionEvent e){
-        CreateArraylistFromDatabase createFromDatabese = new CreateArraylistFromDatabase();
-        ArrayList<Word> databaseWords = createFromDatabese.getAllWord();
+        CreateArraylistFromDatabase createFromDatabase = new CreateArraylistFromDatabase();
         MyReader reader = new MyReader();
-        String path = PathToFileTextField.getText().trim();
         SendWordsFromArrayList send = new SendWordsFromArrayList();
-        HashMap<String,String> duplicatedRemoved;
         PairChecker paircheck = new PairChecker();
-        String[] stringArray = null;
-        HashMap<String,String> hashMap = null;
+        ArraylistToHashmap listToHashmap = new ArraylistToHashmap();
+
+        String pathToTheFile;
+        ArrayList<Word> alreadyInDatabase;
+        HashMap<String,String> duplicatedRemoved;
+        String[] newWords;
+        HashMap<String,String> newHashmap;
+        HashMap<String,String> databaseHashmap;
+
         try {
-            stringArray = reader.Reader(path);
-            hashMap = createHashMap.createHashMap(stringArray);
-            duplicatedRemoved = paircheck.checkPairFileRead(databaseWords,hashMap);
+            // Read the path of the file
+            pathToTheFile = PathToFileTextField.getText().trim();
+
+            // Store the words that are already stored int the database
+            alreadyInDatabase = createFromDatabase.getAllWord();
+            databaseHashmap = listToHashmap.create(alreadyInDatabase);
+
+            // Read the words from the file and store in a string array
+            newWords = reader.Reader(pathToTheFile);
+
+            // Creating a new hashmap from the string[] array
+            newHashmap = createHashMap.createHashMap(newWords);
+
+            duplicatedRemoved = paircheck.checkPairFileRead(databaseHashmap,newHashmap);
             send.send(duplicatedRemoved);
             InfoLabel.setText("Sikeres beolvasás!");
         }catch (IOException q){

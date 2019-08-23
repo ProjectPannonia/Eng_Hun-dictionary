@@ -1,5 +1,6 @@
 package main.checker;
 
+import main.creator.ArraylistToHashmap;
 import main.myalerts.AlreadyExistPair;
 import main.Word;
 
@@ -8,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PairChecker {
-
     public boolean checkIfExistingPair(ArrayList<Word> list, String eng, String hun){
         boolean flag = false;
         for(Word w : list){
@@ -20,25 +20,29 @@ public class PairChecker {
         }
         return flag;
     }
-    public HashMap<String,String> checkPairFileRead(ArrayList<Word> database, HashMap<String,String> newFile){
+    public HashMap<String,String> checkPairFileRead(HashMap<String,String> database, HashMap<String,String> newFile){
 
-        String hunInNewFIle = null;
-        String engInNewFile = null;
+        String hunInNewFIle;
+        String engInNewFile;
         HashMap<String,String> removedDuplicated = new HashMap<>();
 
-        for (Map.Entry<String,String> map : newFile.entrySet()){
-            hunInNewFIle = map.getValue().trim();
-            engInNewFile = map.getKey().trim();
+        outer: for (Map.Entry<String,String> map : newFile.entrySet()){
+            boolean flag = false;
+            String eng = map.getKey();
+            String hun = map.getValue();
+            for(Map.Entry<String,String> datab : database.entrySet()){
 
-            for (Word db : database){
-                boolean flag = false;
-                if((engInNewFile.trim().equals(db.getEng()) && hunInNewFIle.trim().equals(db.getHun()))){
+                if(eng.equals(datab.getKey()) && hun.equals(datab.getValue())){
+                    System.out.println("Eggyezést találtam!");
                     flag = true;
+                    //continue outer;
                 }
-                if(flag == false) removedDuplicated.put(engInNewFile,hunInNewFIle);
+            }
+            if (!flag) {
+                System.out.println("Elküldve !");
+                removedDuplicated.put(map.getKey(),map.getValue());
             }
         }
-
         return removedDuplicated;
     }
 }
