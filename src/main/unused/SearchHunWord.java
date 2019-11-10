@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class SearchHunWord {
     DB db = new DB();
-    Connection conn = db.getConn();
+    Connection conn = db.getConnection();
     public String SearchHunWord(String hun){
         String eng = "";
         try {

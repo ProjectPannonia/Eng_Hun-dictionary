@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class SearchEngWord {
     DB db = new DB();
     PreparedStatement pst = null;
-    Connection conn = db.getConn();
+    Connection conn = db.getConnection();
 
     public String SearchEngWord(String eng){
         String hun = "";

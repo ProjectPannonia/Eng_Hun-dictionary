@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class CreateArraylistFromDatabase {
     DB db = new DB();
-    Statement cst = db.getCst();
+    Statement statement = db.getStatement();
 
     public ArrayList<Word> getAllWord(){
         String sql = "select * from dic";
@@ -18,7 +18,7 @@ public class CreateArraylistFromDatabase {
         ResultSet rs = null;
         words = new ArrayList<>();
         try {
-            rs = cst.executeQuery(sql);
+            rs = statement.executeQuery(sql);
             while(rs.next()){
                 Word actualWord = new Word(rs.getString("eng"),rs.getString("hun"));
                 words.add(actualWord);

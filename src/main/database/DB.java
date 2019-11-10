@@ -10,32 +10,32 @@ public class DB {
     private final String USERNAME = "";
     private final String PASSWORD = "";
 
-    Connection conn = null;
-    Statement cst = null;
-    private DatabaseMetaData dmbd = null;
-    private ResultSet rs = null;
-    PreparedStatement ps = null;
+    Connection connection = null;
+    Statement statement = null;
+    private DatabaseMetaData databaseMetaData = null;
+    private ResultSet resultSet = null;
+    PreparedStatement preparedStatement = null;
 
-    public Connection getConn() {
-        return this.conn;
+    public Connection getConnection() {
+        return this.connection;
     }
-    public Statement getCst(){
-        return this.cst;
+    public Statement getStatement(){
+        return this.statement;
     }
 
 
 
     public DB(){
         try {
-            conn = DriverManager.getConnection(URL);
+            connection = DriverManager.getConnection(URL);
             System.out.println("The bridge created!");
         } catch (SQLException e) {
             System.out.println("Problem when creating the bridge! " + e);
         }
 
-        if(conn != null){
+        if(connection != null){
             try {
-                cst = conn.createStatement();
+                statement = connection.createStatement();
                 System.out.println("Statement created!");
             } catch (SQLException e) {
                 System.out.println("Problem when creating the statement! " + e);
@@ -43,15 +43,15 @@ public class DB {
         }
 
         try {
-            dmbd = conn.getMetaData();
+            databaseMetaData = connection.getMetaData();
         } catch (SQLException e) {
             Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, e);
         }
 
         try {
-            rs = dmbd.getTables(null,"APP","DIC",null);
-            if(!rs.next()){
-                cst.execute("create table dic(eng varchar(20),hun varchar(20))");
+            resultSet = databaseMetaData.getTables(null,"APP","DIC",null);
+            if(!resultSet.next()){
+                statement.execute("create table dic(eng varchar(20),hun varchar(20))");
             }
         } catch (SQLException e) {
             System.out.println("Problem when creating the table(s)! " + e);
