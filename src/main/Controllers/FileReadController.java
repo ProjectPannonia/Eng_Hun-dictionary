@@ -6,7 +6,7 @@ import main.creator.ArraylistToHashmap;
 import main.creator.CreateArraylistFromDatabase;
 import main.creator.CreatingHashMapFromWords;
 import main.myalerts.ReadError;
-import main.reader.MyReader;
+import main.readFromFile.MyReader;
 import main.send.SendWordsFromArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
